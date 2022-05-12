@@ -8,22 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		263E011F282CFA2F00AC0566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E011E282CFA2F00AC0566 /* AppDelegate.swift */; };
-		263E0121282CFA2F00AC0566 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E0120282CFA2F00AC0566 /* SceneDelegate.swift */; };
-		263E0123282CFA2F00AC0566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E0122282CFA2F00AC0566 /* ViewController.swift */; };
-		263E0126282CFA2F00AC0566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263E0124282CFA2F00AC0566 /* Main.storyboard */; };
 		263E0128282CFA3200AC0566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263E0127282CFA3200AC0566 /* Assets.xcassets */; };
 		263E012B282CFA3200AC0566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263E0129282CFA3200AC0566 /* LaunchScreen.storyboard */; };
+		263E013B282D039600AC0566 /* TabBarContainerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E013A282D039600AC0566 /* TabBarContainerRouter.swift */; };
+		263E013D282D03A400AC0566 /* TabBarContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E013C282D03A400AC0566 /* TabBarContainerViewModel.swift */; };
+		263E0142282D0AA700AC0566 /* TabBarContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263E0141282D0AA700AC0566 /* TabBarContainer.storyboard */; };
+		263E0144282D0CAF00AC0566 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E0143282D0CAF00AC0566 /* Assembler.swift */; };
+		263E0146282D0D0B00AC0566 /* TabBarContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E0145282D0D0B00AC0566 /* TabBarContainerViewController.swift */; };
+		263E014B282D0F7900AC0566 /* TabBarContainerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E014A282D0F7900AC0566 /* TabBarContainerModule.swift */; };
+		263E014D282D0FC500AC0566 /* TabBarContainerRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E014C282D0FC500AC0566 /* TabBarContainerRouting.swift */; };
+		263E014F282D0FD300AC0566 /* TabBarContainerViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E014E282D0FD300AC0566 /* TabBarContainerViewModeling.swift */; };
+		26561999282D1860002A9F8F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26561998282D1860002A9F8F /* ViewModel.swift */; };
+		2656199B282D1865002A9F8F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2656199A282D1865002A9F8F /* Router.swift */; };
+		265619A0282D1EB0002A9F8F /* StartScreenModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2656199F282D1EB0002A9F8F /* StartScreenModule.swift */; };
+		265619A2282D1EC6002A9F8F /* StartScreenRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265619A1282D1EC6002A9F8F /* StartScreenRouting.swift */; };
+		265619A4282D1ECC002A9F8F /* StartScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265619A3282D1ECC002A9F8F /* StartScreenRouter.swift */; };
+		265619A6282D1ED6002A9F8F /* StartScreenViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265619A5282D1ED6002A9F8F /* StartScreenViewModeling.swift */; };
+		265619A8282D1EDC002A9F8F /* StartScreenVeiwModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265619A7282D1EDC002A9F8F /* StartScreenVeiwModel.swift */; };
+		265619AA282D1EF1002A9F8F /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265619A9282D1EF1002A9F8F /* StartScreenViewController.swift */; };
+		265619AC282D1F0E002A9F8F /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265619AB282D1F0E002A9F8F /* StartScreen.storyboard */; };
+		265619AE282D21C7002A9F8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265619AD282D21C7002A9F8F /* ViewController.swift */; };
+		265619B3282D3F01002A9F8F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265619B2282D3F01002A9F8F /* TabBar.storyboard */; };
+		265619B5282D405A002A9F8F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265619B4282D405A002A9F8F /* TabBarViewController.swift */; };
+		C6FD28A005EE369BE5E1CF25 /* Pods_EasyPoker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9919C776A3CCD6BC25EF17CA /* Pods_EasyPoker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2605BD789AFAF947F147CBC3 /* Pods-EasyPoker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPoker.release.xcconfig"; path = "Target Support Files/Pods-EasyPoker/Pods-EasyPoker.release.xcconfig"; sourceTree = "<group>"; };
 		263E011B282CFA2F00AC0566 /* EasyPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		263E011E282CFA2F00AC0566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		263E0120282CFA2F00AC0566 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		263E0122282CFA2F00AC0566 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		263E0125282CFA2F00AC0566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		263E0127282CFA3200AC0566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		263E012A282CFA3200AC0566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		263E012C282CFA3200AC0566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		263E013A282D039600AC0566 /* TabBarContainerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainerRouter.swift; sourceTree = "<group>"; };
+		263E013C282D03A400AC0566 /* TabBarContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainerViewModel.swift; sourceTree = "<group>"; };
+		263E0141282D0AA700AC0566 /* TabBarContainer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarContainer.storyboard; sourceTree = "<group>"; };
+		263E0143282D0CAF00AC0566 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		263E0145282D0D0B00AC0566 /* TabBarContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainerViewController.swift; sourceTree = "<group>"; };
+		263E014A282D0F7900AC0566 /* TabBarContainerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainerModule.swift; sourceTree = "<group>"; };
+		263E014C282D0FC500AC0566 /* TabBarContainerRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainerRouting.swift; sourceTree = "<group>"; };
+		263E014E282D0FD300AC0566 /* TabBarContainerViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainerViewModeling.swift; sourceTree = "<group>"; };
+		26561998282D1860002A9F8F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		2656199A282D1865002A9F8F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		2656199F282D1EB0002A9F8F /* StartScreenModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenModule.swift; sourceTree = "<group>"; };
+		265619A1282D1EC6002A9F8F /* StartScreenRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenRouting.swift; sourceTree = "<group>"; };
+		265619A3282D1ECC002A9F8F /* StartScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenRouter.swift; sourceTree = "<group>"; };
+		265619A5282D1ED6002A9F8F /* StartScreenViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewModeling.swift; sourceTree = "<group>"; };
+		265619A7282D1EDC002A9F8F /* StartScreenVeiwModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenVeiwModel.swift; sourceTree = "<group>"; };
+		265619A9282D1EF1002A9F8F /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		265619AB282D1F0E002A9F8F /* StartScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
+		265619AD282D21C7002A9F8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		265619B2282D3F01002A9F8F /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		265619B4282D405A002A9F8F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		764E377B86ED9D1ADFAC2709 /* Pods-EasyPoker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPoker.debug.xcconfig"; path = "Target Support Files/Pods-EasyPoker/Pods-EasyPoker.debug.xcconfig"; sourceTree = "<group>"; };
+		9919C776A3CCD6BC25EF17CA /* Pods_EasyPoker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyPoker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6FD28A005EE369BE5E1CF25 /* Pods_EasyPoker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +81,8 @@
 			children = (
 				263E011D282CFA2F00AC0566 /* EasyPoker */,
 				263E011C282CFA2F00AC0566 /* Products */,
+				C764F5E587C0D245C5D0CE16 /* Pods */,
+				ED856E60193191F65A112EDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +97,193 @@
 		263E011D282CFA2F00AC0566 /* EasyPoker */ = {
 			isa = PBXGroup;
 			children = (
-				263E011E282CFA2F00AC0566 /* AppDelegate.swift */,
-				263E0120282CFA2F00AC0566 /* SceneDelegate.swift */,
-				263E0122282CFA2F00AC0566 /* ViewController.swift */,
-				263E0124282CFA2F00AC0566 /* Main.storyboard */,
-				263E0127282CFA3200AC0566 /* Assets.xcassets */,
-				263E0129282CFA3200AC0566 /* LaunchScreen.storyboard */,
+				265619AF282D3EA1002A9F8F /* UI */,
+				26561997282D184E002A9F8F /* General */,
 				263E012C282CFA3200AC0566 /* Info.plist */,
+				263E0132282D01D800AC0566 /* Support */,
+				263E0133282D021500AC0566 /* Modules */,
 			);
 			path = EasyPoker;
+			sourceTree = "<group>";
+		};
+		263E0132282D01D800AC0566 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				263E011E282CFA2F00AC0566 /* AppDelegate.swift */,
+				263E0127282CFA3200AC0566 /* Assets.xcassets */,
+				263E0129282CFA3200AC0566 /* LaunchScreen.storyboard */,
+				263E0143282D0CAF00AC0566 /* Assembler.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		263E0133282D021500AC0566 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				263E0135282D024000AC0566 /* TabBarModule */,
+				263E0136282D025B00AC0566 /* StartScreenModule */,
+				263E0137282D029B00AC0566 /* PlayerSettingsScreenModule */,
+				263E0138282D030600AC0566 /* ProcessGameScreenModule */,
+				263E0139282D032D00AC0566 /* CombinationsScreenModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		263E0135282D024000AC0566 /* TabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				263E0147282D0F2A00AC0566 /* Router */,
+				263E0148282D0F3900AC0566 /* ViewModel */,
+				263E0149282D0F5300AC0566 /* Veiw */,
+				263E014A282D0F7900AC0566 /* TabBarContainerModule.swift */,
+			);
+			path = TabBarModule;
+			sourceTree = "<group>";
+		};
+		263E0136282D025B00AC0566 /* StartScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				2656199E282D1E95002A9F8F /* Router */,
+				2656199D282D1E90002A9F8F /* ViewModel */,
+				2656199C282D1E69002A9F8F /* View */,
+				2656199F282D1EB0002A9F8F /* StartScreenModule.swift */,
+			);
+			path = StartScreenModule;
+			sourceTree = "<group>";
+		};
+		263E0137282D029B00AC0566 /* PlayerSettingsScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlayerSettingsScreenModule;
+			sourceTree = "<group>";
+		};
+		263E0138282D030600AC0566 /* ProcessGameScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProcessGameScreenModule;
+			sourceTree = "<group>";
+		};
+		263E0139282D032D00AC0566 /* CombinationsScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CombinationsScreenModule;
+			sourceTree = "<group>";
+		};
+		263E013E282D0A5A00AC0566 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				263E0141282D0AA700AC0566 /* TabBarContainer.storyboard */,
+				265619AB282D1F0E002A9F8F /* StartScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		263E0147282D0F2A00AC0566 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				263E014C282D0FC500AC0566 /* TabBarContainerRouting.swift */,
+				263E013A282D039600AC0566 /* TabBarContainerRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		263E0148282D0F3900AC0566 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				263E014E282D0FD300AC0566 /* TabBarContainerViewModeling.swift */,
+				263E013C282D03A400AC0566 /* TabBarContainerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		263E0149282D0F5300AC0566 /* Veiw */ = {
+			isa = PBXGroup;
+			children = (
+				263E0145282D0D0B00AC0566 /* TabBarContainerViewController.swift */,
+			);
+			path = Veiw;
+			sourceTree = "<group>";
+		};
+		26561997282D184E002A9F8F /* General */ = {
+			isa = PBXGroup;
+			children = (
+				26561998282D1860002A9F8F /* ViewModel.swift */,
+				2656199A282D1865002A9F8F /* Router.swift */,
+				265619AD282D21C7002A9F8F /* ViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		2656199C282D1E69002A9F8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				265619A9282D1EF1002A9F8F /* StartScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2656199D282D1E90002A9F8F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				265619A5282D1ED6002A9F8F /* StartScreenViewModeling.swift */,
+				265619A7282D1EDC002A9F8F /* StartScreenVeiwModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2656199E282D1E95002A9F8F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				265619A1282D1EC6002A9F8F /* StartScreenRouting.swift */,
+				265619A3282D1ECC002A9F8F /* StartScreenRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		265619AF282D3EA1002A9F8F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				263E013E282D0A5A00AC0566 /* Storyboards */,
+				265619B0282D3EA8002A9F8F /* Controls */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		265619B0282D3EA8002A9F8F /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				265619B1282D3ECB002A9F8F /* TabBarViewController */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		265619B1282D3ECB002A9F8F /* TabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				265619B2282D3F01002A9F8F /* TabBar.storyboard */,
+				265619B4282D405A002A9F8F /* TabBarViewController.swift */,
+			);
+			path = TabBarViewController;
+			sourceTree = "<group>";
+		};
+		C764F5E587C0D245C5D0CE16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				764E377B86ED9D1ADFAC2709 /* Pods-EasyPoker.debug.xcconfig */,
+				2605BD789AFAF947F147CBC3 /* Pods-EasyPoker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ED856E60193191F65A112EDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9919C776A3CCD6BC25EF17CA /* Pods_EasyPoker.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +293,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 263E012F282CFA3200AC0566 /* Build configuration list for PBXNativeTarget "EasyPoker" */;
 			buildPhases = (
+				6E28A8AF93F3AA71459D7046 /* [CP] Check Pods Manifest.lock */,
 				263E0117282CFA2F00AC0566 /* Sources */,
 				263E0118282CFA2F00AC0566 /* Frameworks */,
 				263E0119282CFA2F00AC0566 /* Resources */,
@@ -126,35 +346,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				263E012B282CFA3200AC0566 /* LaunchScreen.storyboard in Resources */,
+				263E0142282D0AA700AC0566 /* TabBarContainer.storyboard in Resources */,
 				263E0128282CFA3200AC0566 /* Assets.xcassets in Resources */,
-				263E0126282CFA2F00AC0566 /* Main.storyboard in Resources */,
+				265619B3282D3F01002A9F8F /* TabBar.storyboard in Resources */,
+				265619AC282D1F0E002A9F8F /* StartScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E28A8AF93F3AA71459D7046 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyPoker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		263E0117282CFA2F00AC0566 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				263E0123282CFA2F00AC0566 /* ViewController.swift in Sources */,
+				2656199B282D1865002A9F8F /* Router.swift in Sources */,
+				265619AA282D1EF1002A9F8F /* StartScreenViewController.swift in Sources */,
+				265619A4282D1ECC002A9F8F /* StartScreenRouter.swift in Sources */,
+				26561999282D1860002A9F8F /* ViewModel.swift in Sources */,
+				265619B5282D405A002A9F8F /* TabBarViewController.swift in Sources */,
+				265619A0282D1EB0002A9F8F /* StartScreenModule.swift in Sources */,
+				263E014B282D0F7900AC0566 /* TabBarContainerModule.swift in Sources */,
+				263E013D282D03A400AC0566 /* TabBarContainerViewModel.swift in Sources */,
+				263E014D282D0FC500AC0566 /* TabBarContainerRouting.swift in Sources */,
+				263E013B282D039600AC0566 /* TabBarContainerRouter.swift in Sources */,
+				263E0144282D0CAF00AC0566 /* Assembler.swift in Sources */,
 				263E011F282CFA2F00AC0566 /* AppDelegate.swift in Sources */,
-				263E0121282CFA2F00AC0566 /* SceneDelegate.swift in Sources */,
+				263E0146282D0D0B00AC0566 /* TabBarContainerViewController.swift in Sources */,
+				265619AE282D21C7002A9F8F /* ViewController.swift in Sources */,
+				265619A2282D1EC6002A9F8F /* StartScreenRouting.swift in Sources */,
+				265619A6282D1ED6002A9F8F /* StartScreenViewModeling.swift in Sources */,
+				263E014F282D0FD300AC0566 /* TabBarContainerViewModeling.swift in Sources */,
+				265619A8282D1EDC002A9F8F /* StartScreenVeiwModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		263E0124282CFA2F00AC0566 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				263E0125282CFA2F00AC0566 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		263E0129282CFA3200AC0566 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +536,7 @@
 		};
 		263E0130282CFA3200AC0566 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 764E377B86ED9D1ADFAC2709 /* Pods-EasyPoker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -291,7 +546,6 @@
 				INFOPLIST_FILE = EasyPoker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,6 +563,7 @@
 		};
 		263E0131282CFA3200AC0566 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2605BD789AFAF947F147CBC3 /* Pods-EasyPoker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,7 +573,6 @@
 				INFOPLIST_FILE = EasyPoker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
