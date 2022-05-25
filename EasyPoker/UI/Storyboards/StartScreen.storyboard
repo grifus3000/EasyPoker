@@ -7,6 +7,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Itim-Regular.ttf">
+            <string>Itim-Regular</string>
+        </array>
+        <array key="TimesNewRoman.ttf">
+            <string>.SFUI-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Start Screen View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -16,23 +24,92 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3H-ij-qpK">
-                                <rect key="frame" x="174" y="161" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEv-mh-F1L">
+                                <rect key="frame" x="25" y="180" width="364" height="200"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xU4-Fe-gJc">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="200"/>
+                                        <connections>
+                                            <segue destination="vCl-c4-KLc" kind="embed" id="Zl4-Jc-Zrn"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xU4-Fe-gJc" secondAttribute="bottom" id="5aM-aB-hAM"/>
+                                    <constraint firstItem="xU4-Fe-gJc" firstAttribute="leading" secondItem="GEv-mh-F1L" secondAttribute="leading" id="DwN-Nh-BSy"/>
+                                    <constraint firstAttribute="trailing" secondItem="xU4-Fe-gJc" secondAttribute="trailing" id="Fr4-QA-5kr"/>
+                                    <constraint firstAttribute="height" constant="200" id="hPM-zc-AZM"/>
+                                    <constraint firstItem="xU4-Fe-gJc" firstAttribute="top" secondItem="GEv-mh-F1L" secondAttribute="top" id="zKN-9n-APW"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWe-a4-icN">
+                                <rect key="frame" x="134.5" y="84" width="145" height="30"/>
+                                <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3H-ij-qpK" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
+                                <rect key="frame" x="160.5" y="134" width="93" height="31"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add player"/>
+                                <connections>
+                                    <action selector="addPlayerButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SaZ-T5-sIs"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderFooter" translatesAutoresizingMaskIntoConstraints="NO" id="56A-eJ-ws8">
+                                <rect key="frame" x="25" y="170" width="364" height="10"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeT-zn-FQL" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
+                                <rect key="frame" x="143.5" y="721" width="127.5" height="41"/>
+                                <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start game"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start game">
+                                    <fontDescription key="titleFontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="24"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderFooter" translatesAutoresizingMaskIntoConstraints="NO" id="uMi-Wi-Bn0">
+                                <rect key="frame" x="25" y="380" width="364" height="10"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.63137254901960782" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YeT-zn-FQL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="DQj-HY-PVR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uMi-Wi-Bn0" secondAttribute="trailing" constant="25" id="EwW-Pw-yBT"/>
+                            <constraint firstItem="uMi-Wi-Bn0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="I3U-td-v7V"/>
+                            <constraint firstItem="56A-eJ-ws8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="ICc-He-fio"/>
+                            <constraint firstItem="eWe-a4-icN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="JFi-IM-MyE"/>
+                            <constraint firstItem="r3H-ij-qpK" firstAttribute="top" secondItem="eWe-a4-icN" secondAttribute="bottom" constant="20" id="Oxd-6s-Pd3"/>
+                            <constraint firstItem="r3H-ij-qpK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="W0y-QM-SuO"/>
+                            <constraint firstItem="eWe-a4-icN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ZfC-bW-Pwx"/>
+                            <constraint firstItem="GEv-mh-F1L" firstAttribute="top" secondItem="56A-eJ-ws8" secondAttribute="bottom" id="bKC-zx-7RO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GEv-mh-F1L" secondAttribute="trailing" constant="25" id="chf-zW-Vkj"/>
+                            <constraint firstItem="uMi-Wi-Bn0" firstAttribute="top" secondItem="GEv-mh-F1L" secondAttribute="bottom" id="d6m-9K-Plh"/>
+                            <constraint firstItem="GEv-mh-F1L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="erh-vF-lMQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="56A-eJ-ws8" secondAttribute="trailing" constant="25" id="gXb-Qz-IOk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="YeT-zn-FQL" secondAttribute="bottom" constant="100" id="mI0-MH-Vcg"/>
+                            <constraint firstItem="56A-eJ-ws8" firstAttribute="top" secondItem="r3H-ij-qpK" secondAttribute="bottom" constant="5" id="ttw-mY-b5e"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61" y="92"/>
+            <point key="canvasLocation" x="60.869565217391312" y="91.741071428571431"/>
+        </scene>
+        <!--MainTableView-->
+        <scene sceneID="AtR-l3-w31">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MainTableView" id="vCl-c4-KLc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7L8-oZ-3qW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="690" y="43"/>
         </scene>
     </scenes>
     <resources>
+        <image name="HeaderFooter" width="644" height="10"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

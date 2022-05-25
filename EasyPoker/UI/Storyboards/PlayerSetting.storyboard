@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Itim-Regular.ttf">
+            <string>Itim-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Player Settings View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PlayerSetting" id="Y6W-OH-hqX" customClass="PlayerSettingsViewController" customModule="EasyPoker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyU-Te-hkU">
+                                <rect key="frame" x="166" y="171" width="82" height="36"/>
+                                <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Txe-Dr-YWK">
+                                <rect key="frame" x="155.5" y="257" width="103.5" height="45.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of chips" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yIK-hs-lqv">
+                                <rect key="frame" x="88" y="342.5" width="238.5" height="45.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnC-Dj-mY1" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
+                                <rect key="frame" x="161" y="488" width="92" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add photo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOR-Oo-eyZ" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
+                                <rect key="frame" x="322" y="60" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="YTq-C4-BBz">
+                                <rect key="frame" x="107" y="559" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YTq-C4-BBz" secondAttribute="height" multiplier="1:1" id="DZn-ci-tJj"/>
+                                    <constraint firstAttribute="width" constant="200" id="gNl-UC-dZE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tf4-hS-rpa" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
+                                <rect key="frame" x="25" y="60" width="69" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.63137254901960782" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yIK-hs-lqv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="5d7-wI-2k8"/>
+                            <constraint firstItem="EyU-Te-hkU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="81T-WV-OeN"/>
+                            <constraint firstItem="Txe-Dr-YWK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Nex-DB-rQ7"/>
+                            <constraint firstItem="YTq-C4-BBz" firstAttribute="top" secondItem="cnC-Dj-mY1" secondAttribute="bottom" constant="40" id="RWJ-Mt-tbz"/>
+                            <constraint firstItem="cnC-Dj-mY1" firstAttribute="top" secondItem="yIK-hs-lqv" secondAttribute="bottom" constant="100" id="VrM-jz-H0C"/>
+                            <constraint firstItem="tf4-hS-rpa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="ZWP-ZG-YSO"/>
+                            <constraint firstItem="yIK-hs-lqv" firstAttribute="top" secondItem="Txe-Dr-YWK" secondAttribute="bottom" constant="40" id="h9D-zt-bN6"/>
+                            <constraint firstItem="tf4-hS-rpa" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="idp-o9-mg3"/>
+                            <constraint firstItem="cnC-Dj-mY1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="k8e-1j-0bl"/>
+                            <constraint firstItem="YTq-C4-BBz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="nTl-ba-wM2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MOR-Oo-eyZ" secondAttribute="trailing" constant="25" id="neP-u0-ggQ"/>
+                            <constraint firstItem="Txe-Dr-YWK" firstAttribute="top" secondItem="EyU-Te-hkU" secondAttribute="bottom" constant="50" id="oJM-Tt-87q"/>
+                            <constraint firstItem="MOR-Oo-eyZ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="p9J-R5-ISm"/>
+                            <constraint firstItem="EyU-Te-hkU" firstAttribute="top" secondItem="MOR-Oo-eyZ" secondAttribute="bottom" constant="80" id="sUc-og-sZE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerAvatar" destination="YTq-C4-BBz" id="orK-MN-aSE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="68"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AvatarPlaceholder" width="82" height="82"/>
+    </resources>
+</document>

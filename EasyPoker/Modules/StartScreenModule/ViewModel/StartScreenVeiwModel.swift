@@ -7,6 +7,8 @@
 
 import Foundation
 
-class StartScreenViewModel: ViewModel, StartScreenViewModeling {
-    
+class StartScreenViewModel: ViewModel<StartScreenRouting>, StartScreenViewModeling {
+    func showPlayerSettings() {
+        router?.presentPlayerSettings()
+    }
 }

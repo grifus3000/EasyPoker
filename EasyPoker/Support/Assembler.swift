@@ -27,5 +27,7 @@ extension Assembler {
     static func registerModules() {
         TabBarContainerModule.register()
         StartScreenModule.register()
+        CombinationsModule.register()
+        PlayerSettingsModule.register()
     }
 }

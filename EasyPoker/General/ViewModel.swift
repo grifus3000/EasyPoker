@@ -7,6 +7,10 @@
 
 import Foundation
 
-protocol ViewModel {
+class ViewModel<RouterType> {
+    var router: RouterType?
     
+    init(router: RouterType) {
+        self.router = router
+    }
 }

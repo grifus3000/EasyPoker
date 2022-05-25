@@ -24,6 +24,9 @@ class TabBarContainerViewController: ViewController<TabBarContainerViewModeling>
         addChild(tabBarVC)
         view.addSubview(tabBarVC.view)
         tabBarVC.didMove(toParent: self)
+        
+        tabBarVC.tabBar.backgroundColor = .gray
+        tabBarVC.tabBar.alpha = 0.7
     }
     
     override func viewDidLoad() {

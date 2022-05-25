@@ -8,5 +8,5 @@
 import Foundation
 
 protocol StartScreenViewModeling {
-    
+    func showPlayerSettings()
 }

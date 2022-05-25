@@ -22,12 +22,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         vc.configureTabBar()
         
         let startVC = StartScreenModule.setupViewController()
+        let combinationsVC = CombinationsModule.setupViewContoller()
         
-        let item1 = UITabBarItem(title: "ni", image: nil, selectedImage: nil)
+        let image1 = UIImage(named: "GameIcon")
+        let item1 = UITabBarItem(title: "Game", image: image1, selectedImage: nil)
+        item1.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Itim-Regular", size: 20)], for: .normal)
+        
+        let tabBarHeight = vc.tabBarVC?.tabBar.bounds.height
+        let itemOffset = (tabBarHeight ?? 0) / 5
+        
+        item1.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: itemOffset)
+        item1.imageInsets = UIEdgeInsets(top: itemOffset, left: 0, bottom: -itemOffset, right: 0)
+        
         startVC.tabBarItem = item1
+        vc.tabBarVC?.tabBar.tintColor = .black
+        
+        let image2 = UIImage(named: "CombinationsIcon")
+        let item2 = UITabBarItem(title: "Combinations", image: image2, selectedImage: nil)
+        item2.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Itim-Regular", size: 20)], for: .normal)
+        combinationsVC.tabBarItem = item2
         
         vc.tabBarVC!.viewControllers = [
-            startVC
+            startVC,
+            combinationsVC
         ]
         
         window?.rootViewController = vc

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2622501E283E80B600E7ED57 /* PlayerSettingsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2622501D283E80B600E7ED57 /* PlayerSettingsModule.swift */; };
+		26225020283E80E400E7ED57 /* PlayerSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2622501F283E80E400E7ED57 /* PlayerSettingsViewController.swift */; };
+		26225023283E812200E7ED57 /* PlayerSettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26225022283E812200E7ED57 /* PlayerSettingsRouter.swift */; };
+		26225025283E818B00E7ED57 /* PlayerSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26225024283E818B00E7ED57 /* PlayerSettingsViewModel.swift */; };
+		26225028283E87E800E7ED57 /* CombinationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26225027283E87E800E7ED57 /* CombinationsRouter.swift */; };
+		2622502A283E8B5D00E7ED57 /* PlayerSettingsRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26225029283E8B5D00E7ED57 /* PlayerSettingsRouting.swift */; };
+		2622502C283E8B7500E7ED57 /* CombinationsRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2622502B283E8B7500E7ED57 /* CombinationsRouting.swift */; };
+		263ABB33282E85D1005B173E /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263ABB31282E85D1005B173E /* MainTableViewCell.swift */; };
+		263ABB34282E85D1005B173E /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263ABB32282E85D1005B173E /* MainTableViewCell.xib */; };
+		263ABB36282EB62B005B173E /* ProcessScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263ABB35282EB62B005B173E /* ProcessScreen.storyboard */; };
 		263E011F282CFA2F00AC0566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E011E282CFA2F00AC0566 /* AppDelegate.swift */; };
 		263E0128282CFA3200AC0566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263E0127282CFA3200AC0566 /* Assets.xcassets */; };
 		263E012B282CFA3200AC0566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263E0129282CFA3200AC0566 /* LaunchScreen.storyboard */; };
@@ -30,11 +40,30 @@
 		265619AE282D21C7002A9F8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265619AD282D21C7002A9F8F /* ViewController.swift */; };
 		265619B3282D3F01002A9F8F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265619B2282D3F01002A9F8F /* TabBar.storyboard */; };
 		265619B5282D405A002A9F8F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265619B4282D405A002A9F8F /* TabBarViewController.swift */; };
+		26AC28B1282E371400D6A9C8 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC28B0282E371400D6A9C8 /* MainTableViewController.swift */; };
+		26AC28B3282E372200D6A9C8 /* MainTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26AC28B2282E372200D6A9C8 /* MainTableView.storyboard */; };
+		26AC28B6282E3DED00D6A9C8 /* EPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC28B5282E3DED00D6A9C8 /* EPButton.swift */; };
+		26AC28B9282E41C800D6A9C8 /* Itim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26AC28B8282E41C800D6A9C8 /* Itim-Regular.ttf */; };
+		26AC28BB282E453100D6A9C8 /* PlayerSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26AC28BA282E453100D6A9C8 /* PlayerSetting.storyboard */; };
+		26AC28BD282E4DE900D6A9C8 /* Combinations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26AC28BC282E4DE900D6A9C8 /* Combinations.storyboard */; };
+		26AC28C1282E50DE00D6A9C8 /* CombinationsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC28C0282E50DE00D6A9C8 /* CombinationsModule.swift */; };
+		26AC28C3282E51DA00D6A9C8 /* CombinationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC28C2282E51DA00D6A9C8 /* CombinationsViewController.swift */; };
+		26AC28C5282E520300D6A9C8 /* CobinationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC28C4282E520300D6A9C8 /* CobinationsViewModel.swift */; };
 		C6FD28A005EE369BE5E1CF25 /* Pods_EasyPoker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9919C776A3CCD6BC25EF17CA /* Pods_EasyPoker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2605BD789AFAF947F147CBC3 /* Pods-EasyPoker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPoker.release.xcconfig"; path = "Target Support Files/Pods-EasyPoker/Pods-EasyPoker.release.xcconfig"; sourceTree = "<group>"; };
+		2622501D283E80B600E7ED57 /* PlayerSettingsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettingsModule.swift; sourceTree = "<group>"; };
+		2622501F283E80E400E7ED57 /* PlayerSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettingsViewController.swift; sourceTree = "<group>"; };
+		26225022283E812200E7ED57 /* PlayerSettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettingsRouter.swift; sourceTree = "<group>"; };
+		26225024283E818B00E7ED57 /* PlayerSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettingsViewModel.swift; sourceTree = "<group>"; };
+		26225027283E87E800E7ED57 /* CombinationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationsRouter.swift; sourceTree = "<group>"; };
+		26225029283E8B5D00E7ED57 /* PlayerSettingsRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettingsRouting.swift; sourceTree = "<group>"; };
+		2622502B283E8B7500E7ED57 /* CombinationsRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationsRouting.swift; sourceTree = "<group>"; };
+		263ABB31282E85D1005B173E /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		263ABB32282E85D1005B173E /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		263ABB35282EB62B005B173E /* ProcessScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProcessScreen.storyboard; sourceTree = "<group>"; };
 		263E011B282CFA2F00AC0566 /* EasyPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		263E011E282CFA2F00AC0566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		263E0127282CFA3200AC0566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +89,15 @@
 		265619AD282D21C7002A9F8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		265619B2282D3F01002A9F8F /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		265619B4282D405A002A9F8F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		26AC28B0282E371400D6A9C8 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		26AC28B2282E372200D6A9C8 /* MainTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTableView.storyboard; sourceTree = "<group>"; };
+		26AC28B5282E3DED00D6A9C8 /* EPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPButton.swift; sourceTree = "<group>"; };
+		26AC28B8282E41C800D6A9C8 /* Itim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Itim-Regular.ttf"; path = "../../../../../../Downloads/Itim/Itim-Regular.ttf"; sourceTree = "<group>"; };
+		26AC28BA282E453100D6A9C8 /* PlayerSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerSetting.storyboard; sourceTree = "<group>"; };
+		26AC28BC282E4DE900D6A9C8 /* Combinations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Combinations.storyboard; sourceTree = "<group>"; };
+		26AC28C0282E50DE00D6A9C8 /* CombinationsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationsModule.swift; sourceTree = "<group>"; };
+		26AC28C2282E51DA00D6A9C8 /* CombinationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationsViewController.swift; sourceTree = "<group>"; };
+		26AC28C4282E520300D6A9C8 /* CobinationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobinationsViewModel.swift; sourceTree = "<group>"; };
 		764E377B86ED9D1ADFAC2709 /* Pods-EasyPoker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyPoker.debug.xcconfig"; path = "Target Support Files/Pods-EasyPoker/Pods-EasyPoker.debug.xcconfig"; sourceTree = "<group>"; };
 		9919C776A3CCD6BC25EF17CA /* Pods_EasyPoker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyPoker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -76,6 +114,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2622501B283E7F4F00E7ED57 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				26225024283E818B00E7ED57 /* PlayerSettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2622501C283E7F5900E7ED57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2622501F283E80E400E7ED57 /* PlayerSettingsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		26225021283E811800E7ED57 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				26225029283E8B5D00E7ED57 /* PlayerSettingsRouting.swift */,
+				26225022283E812200E7ED57 /* PlayerSettingsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		26225026283E87DB00E7ED57 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				26225027283E87E800E7ED57 /* CombinationsRouter.swift */,
+				2622502B283E8B7500E7ED57 /* CombinationsRouting.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		263ABB30282E85AF005B173E /* MainTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				263ABB31282E85D1005B173E /* MainTableViewCell.swift */,
+				263ABB32282E85D1005B173E /* MainTableViewCell.xib */,
+			);
+			path = MainTableCell;
+			sourceTree = "<group>";
+		};
 		263E0112282CFA2F00AC0566 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +190,7 @@
 		263E0132282D01D800AC0566 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				26AC28B7282E41BA00D6A9C8 /* Font */,
 				263E011E282CFA2F00AC0566 /* AppDelegate.swift */,
 				263E0127282CFA3200AC0566 /* Assets.xcassets */,
 				263E0129282CFA3200AC0566 /* LaunchScreen.storyboard */,
@@ -154,6 +236,10 @@
 		263E0137282D029B00AC0566 /* PlayerSettingsScreenModule */ = {
 			isa = PBXGroup;
 			children = (
+				26225021283E811800E7ED57 /* Router */,
+				2622501B283E7F4F00E7ED57 /* ViewModel */,
+				2622501C283E7F5900E7ED57 /* View */,
+				2622501D283E80B600E7ED57 /* PlayerSettingsModule.swift */,
 			);
 			path = PlayerSettingsScreenModule;
 			sourceTree = "<group>";
@@ -168,6 +254,10 @@
 		263E0139282D032D00AC0566 /* CombinationsScreenModule */ = {
 			isa = PBXGroup;
 			children = (
+				26225026283E87DB00E7ED57 /* Router */,
+				26AC28BF282E50CB00D6A9C8 /* ViewModel */,
+				26AC28BE282E50BF00D6A9C8 /* View */,
+				26AC28C0282E50DE00D6A9C8 /* CombinationsModule.swift */,
 			);
 			path = CombinationsScreenModule;
 			sourceTree = "<group>";
@@ -177,6 +267,9 @@
 			children = (
 				263E0141282D0AA700AC0566 /* TabBarContainer.storyboard */,
 				265619AB282D1F0E002A9F8F /* StartScreen.storyboard */,
+				26AC28BA282E453100D6A9C8 /* PlayerSetting.storyboard */,
+				26AC28BC282E4DE900D6A9C8 /* Combinations.storyboard */,
+				263ABB35282EB62B005B173E /* ProcessScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -255,6 +348,9 @@
 		265619B0282D3EA8002A9F8F /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				263ABB30282E85AF005B173E /* MainTableCell */,
+				26AC28B4282E3DB300D6A9C8 /* EPButton */,
+				26AC28AB282E368500D6A9C8 /* MainTable */,
 				265619B1282D3ECB002A9F8F /* TabBarViewController */,
 			);
 			path = Controls;
@@ -267,6 +363,47 @@
 				265619B4282D405A002A9F8F /* TabBarViewController.swift */,
 			);
 			path = TabBarViewController;
+			sourceTree = "<group>";
+		};
+		26AC28AB282E368500D6A9C8 /* MainTable */ = {
+			isa = PBXGroup;
+			children = (
+				26AC28B0282E371400D6A9C8 /* MainTableViewController.swift */,
+				26AC28B2282E372200D6A9C8 /* MainTableView.storyboard */,
+			);
+			path = MainTable;
+			sourceTree = "<group>";
+		};
+		26AC28B4282E3DB300D6A9C8 /* EPButton */ = {
+			isa = PBXGroup;
+			children = (
+				26AC28B5282E3DED00D6A9C8 /* EPButton.swift */,
+			);
+			path = EPButton;
+			sourceTree = "<group>";
+		};
+		26AC28B7282E41BA00D6A9C8 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				26AC28B8282E41C800D6A9C8 /* Itim-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		26AC28BE282E50BF00D6A9C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26AC28C2282E51DA00D6A9C8 /* CombinationsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		26AC28BF282E50CB00D6A9C8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				26AC28C4282E520300D6A9C8 /* CobinationsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C764F5E587C0D245C5D0CE16 /* Pods */ = {
@@ -347,9 +484,15 @@
 			files = (
 				263E012B282CFA3200AC0566 /* LaunchScreen.storyboard in Resources */,
 				263E0142282D0AA700AC0566 /* TabBarContainer.storyboard in Resources */,
+				26AC28BB282E453100D6A9C8 /* PlayerSetting.storyboard in Resources */,
 				263E0128282CFA3200AC0566 /* Assets.xcassets in Resources */,
+				263ABB34282E85D1005B173E /* MainTableViewCell.xib in Resources */,
+				263ABB36282EB62B005B173E /* ProcessScreen.storyboard in Resources */,
 				265619B3282D3F01002A9F8F /* TabBar.storyboard in Resources */,
 				265619AC282D1F0E002A9F8F /* StartScreen.storyboard in Resources */,
+				26AC28BD282E4DE900D6A9C8 /* Combinations.storyboard in Resources */,
+				26AC28B9282E41C800D6A9C8 /* Itim-Regular.ttf in Resources */,
+				26AC28B3282E372200D6A9C8 /* MainTableView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,22 +529,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				2656199B282D1865002A9F8F /* Router.swift in Sources */,
+				2622502C283E8B7500E7ED57 /* CombinationsRouting.swift in Sources */,
+				26AC28C1282E50DE00D6A9C8 /* CombinationsModule.swift in Sources */,
 				265619AA282D1EF1002A9F8F /* StartScreenViewController.swift in Sources */,
+				26AC28B6282E3DED00D6A9C8 /* EPButton.swift in Sources */,
+				26225023283E812200E7ED57 /* PlayerSettingsRouter.swift in Sources */,
 				265619A4282D1ECC002A9F8F /* StartScreenRouter.swift in Sources */,
 				26561999282D1860002A9F8F /* ViewModel.swift in Sources */,
 				265619B5282D405A002A9F8F /* TabBarViewController.swift in Sources */,
 				265619A0282D1EB0002A9F8F /* StartScreenModule.swift in Sources */,
 				263E014B282D0F7900AC0566 /* TabBarContainerModule.swift in Sources */,
 				263E013D282D03A400AC0566 /* TabBarContainerViewModel.swift in Sources */,
+				263ABB33282E85D1005B173E /* MainTableViewCell.swift in Sources */,
+				26AC28C5282E520300D6A9C8 /* CobinationsViewModel.swift in Sources */,
+				26AC28C3282E51DA00D6A9C8 /* CombinationsViewController.swift in Sources */,
+				26AC28B1282E371400D6A9C8 /* MainTableViewController.swift in Sources */,
 				263E014D282D0FC500AC0566 /* TabBarContainerRouting.swift in Sources */,
 				263E013B282D039600AC0566 /* TabBarContainerRouter.swift in Sources */,
 				263E0144282D0CAF00AC0566 /* Assembler.swift in Sources */,
 				263E011F282CFA2F00AC0566 /* AppDelegate.swift in Sources */,
 				263E0146282D0D0B00AC0566 /* TabBarContainerViewController.swift in Sources */,
 				265619AE282D21C7002A9F8F /* ViewController.swift in Sources */,
+				26225020283E80E400E7ED57 /* PlayerSettingsViewController.swift in Sources */,
+				2622501E283E80B600E7ED57 /* PlayerSettingsModule.swift in Sources */,
 				265619A2282D1EC6002A9F8F /* StartScreenRouting.swift in Sources */,
 				265619A6282D1ED6002A9F8F /* StartScreenViewModeling.swift in Sources */,
 				263E014F282D0FD300AC0566 /* TabBarContainerViewModeling.swift in Sources */,
+				26225028283E87E800E7ED57 /* CombinationsRouter.swift in Sources */,
+				26225025283E818B00E7ED57 /* PlayerSettingsViewModel.swift in Sources */,
+				2622502A283E8B5D00E7ED57 /* PlayerSettingsRouting.swift in Sources */,
 				265619A8282D1EDC002A9F8F /* StartScreenVeiwModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +698,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9KCU8LDMP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EasyPoker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -569,6 +726,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9KCU8LDMP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EasyPoker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

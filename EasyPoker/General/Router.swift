@@ -6,7 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
-protocol Router {
+class Router {
+    weak var viewController: UIViewController?
     
+    init(viewController: UIViewController) {
+        self.viewController = viewController
+    }
 }

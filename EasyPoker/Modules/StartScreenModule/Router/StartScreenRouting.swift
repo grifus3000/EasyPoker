@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol StartScreenRouting {
-    
+protocol StartScreenRouting: Router {
+    func presentPlayerSettings()
 }

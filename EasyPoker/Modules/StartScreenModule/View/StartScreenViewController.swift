@@ -10,4 +10,7 @@ import UIKit
 
 class StartScreenViewController: ViewController<StartScreenViewModeling> {
     
+    @IBAction func addPlayerButton(_ sender: Any) {
+        viewModel?.showPlayerSettings()
+    }
 }

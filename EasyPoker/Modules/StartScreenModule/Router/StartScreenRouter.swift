@@ -8,5 +8,8 @@
 import Foundation
 
 class StartScreenRouter: Router, StartScreenRouting {
-    
+    func presentPlayerSettings() {
+        let playerSettingsVC = PlayerSettingsModule.setupViewController()
+        viewController?.show(playerSettingsVC, sender: nil)
+    }
 }
