@@ -8,7 +8,16 @@
 import Foundation
 
 class StartScreenViewModel: ViewModel<StartScreenRouting>, StartScreenViewModeling {
+    
+    var completion: ((_ player: Player) -> ())?
+    
     func showPlayerSettings() {
-        router?.presentPlayerSettings()
+        router?.presentPlayerSettings(delegate: self)
+    }
+}
+
+extension StartScreenViewModel: PlayerSettingsViewModelDelegate {
+    func sendPlayer(_ player: Player) {
+        completion!(player)
     }
 }

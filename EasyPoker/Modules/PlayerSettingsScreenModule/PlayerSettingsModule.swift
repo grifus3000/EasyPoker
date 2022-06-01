@@ -10,17 +10,22 @@ import UIKit
 
 class PlayerSettingsModule {
     static func register() {
-        let storyboard = UIStoryboard(name: "PlayerSetting", bundle: .main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PlayerSetting") as! PlayerSettingsViewController
-        let router = PlayerSettingsRouter(viewController: vc)
-        let viewModel = PlayerSettingsViewModel(router: router)
-        vc.viewModel = viewModel
+        Assembler.register(type: PlayerSettingsRouter.self) { viewController in
+            return PlayerSettingsRouter(viewController: viewController)
+        }
         
-        Assembler.register(type: PlayerSettingsViewController.self, instance: vc)
+        Assembler.register(type: PlayerSettingsViewModel.self) { router in
+            PlayerSettingsViewModel(router: router)
+        }
     }
     
     static func setupViewController() -> PlayerSettingsViewController {
-        let vc = Assembler.resolve(type: PlayerSettingsViewController.self)!
+        let storyboard = UIStoryboard(name: "PlayerSetting", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PlayerSetting") as! PlayerSettingsViewController
+        
+        let router = Assembler.resolve(PlayerSettingsRouter.self, with: vc)
+        vc.viewModel = Assembler.resolve(PlayerSettingsViewModel.self, with: router)
+        
         return vc
     }
 }

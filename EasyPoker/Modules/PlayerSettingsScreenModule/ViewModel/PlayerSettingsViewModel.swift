@@ -7,6 +7,24 @@
 
 import Foundation
 
-class PlayerSettingsViewModel: ViewModel<PlayerSettingsRouting> {
+protocol PlayerSettingsViewModelDelegate: AnyObject {
+    func sendPlayer(_ player: Player)
+}
+
+class PlayerSettingsViewModel: ViewModel<PlayerSettingsRouting>, PlayerSettingsViewModeling {
     
+    weak var delegate: PlayerSettingsViewModelDelegate?
+    
+    func createPlayer(name: String?, chips: String?) {
+        guard let name = name, let chips = chips else {
+            return
+        }
+        
+        guard let chipsInt = Int(chips) else {
+            return
+        }
+        let player = Player(name: name, chips: chipsInt)
+        
+        delegate?.sendPlayer(player)
+    }
 }

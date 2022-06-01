@@ -47,6 +47,9 @@
                                 <rect key="frame" x="322" y="60" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create"/>
+                                <connections>
+                                    <action selector="createButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Uih-gd-hcj"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="YTq-C4-BBz">
                                 <rect key="frame" x="107" y="559" width="200" height="200"/>
@@ -82,6 +85,8 @@
                     </view>
                     <connections>
                         <outlet property="playerAvatar" destination="YTq-C4-BBz" id="orK-MN-aSE"/>
+                        <outlet property="playerChipsLable" destination="yIK-hs-lqv" id="lWG-dN-3Nq"/>
+                        <outlet property="playerNameLable" destination="Txe-Dr-YWK" id="v6M-yA-sfB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

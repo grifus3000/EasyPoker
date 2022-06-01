@@ -8,5 +8,5 @@
 import Foundation
 
 protocol StartScreenRouting: Router {
-    func presentPlayerSettings()
+    func presentPlayerSettings(delegate: PlayerSettingsViewModelDelegate)
 }

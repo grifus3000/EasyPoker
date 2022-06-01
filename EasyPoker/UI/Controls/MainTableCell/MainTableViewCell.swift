@@ -23,6 +23,11 @@ class MainTableViewCell: UITableViewCell {
         playerPhoto.layer.cornerRadius = playerPhoto.bounds.height / 2
     }
     
+    func setup(with player: Player) {
+        playerName.text = player.name
+        playerChips.text = String(player.chips)
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         configureCell()

@@ -10,7 +10,11 @@ import UIKit
 
 class PlayerSettingsViewController: ViewController<PlayerSettingsViewModel> {
     
+    @IBOutlet weak var playerNameLable: UITextField!
+    @IBOutlet weak var playerChipsLable: UITextField!
     @IBOutlet weak var playerAvatar: UIImageView!
+    
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,4 +25,13 @@ class PlayerSettingsViewController: ViewController<PlayerSettingsViewModel> {
         
         playerAvatar.layer.cornerRadius = playerAvatar.bounds.height / 2
     }
+    
+    // MARK: Logic
+    
+    @IBAction func createButton(_ sender: Any) {
+        viewModel?.createPlayer(name: playerNameLable.text, chips: playerChipsLable.text)
+        dismiss(animated: true)
+    }
+    
+    
 }

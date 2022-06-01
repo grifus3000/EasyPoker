@@ -8,5 +8,7 @@
 import Foundation
 
 protocol StartScreenViewModeling {
+    var completion: ((_ player: Player) -> ())? { get set }
+    
     func showPlayerSettings()
 }

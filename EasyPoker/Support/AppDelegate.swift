@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         vc.configureTabBar()
         
         let startVC = StartScreenModule.setupViewController()
-        let combinationsVC = CombinationsModule.setupViewContoller()
+        let combinationsVC = CombinationsModule.setupViewController()
         
         let image1 = UIImage(named: "GameIcon")
         let item1 = UITabBarItem(title: "Game", image: image1, selectedImage: nil)

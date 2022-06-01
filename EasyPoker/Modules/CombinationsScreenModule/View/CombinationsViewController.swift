@@ -7,6 +7,6 @@
 
 import Foundation
 
-class CombinationsViewController: ViewController<CobinationsViewModel> {
+class CombinationsViewController: ViewController<CombinationsViewModel> {
     
 }

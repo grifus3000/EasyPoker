@@ -10,23 +10,24 @@ import UIKit
 
 class StartScreenModule {
     static func register() {
-        let storyboard = UIStoryboard(name: "StartScreen", bundle: .main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "StartScreen") as! StartScreenViewController
-        let router = StartScreenRouter(viewController: vc)
-        let viewModel = StartScreenViewModel(router: router)
-        vc.viewModel = viewModel
+        Assembler.register(type: StartScreenRouter.self, closure: { viewController in
+            StartScreenRouter(viewController: viewController)
+        })
         
-        Assembler.register(type: StartScreenViewController.self, instance: vc)
-        Assembler.register(type: StartScreenRouter.self, instance: router)
-        Assembler.register(type: StartScreenViewModel.self, instance: viewModel)
+        Assembler.register(type: StartScreenViewModel.self) { router in
+            StartScreenViewModel(router: router)
+        }
     }
     
     static func setupViewController() -> StartScreenViewController {
         
-        let viewController = Assembler.resolve(type: StartScreenViewController.self)!
+        let storyboard = UIStoryboard(name: "StartScreen", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "StartScreen") as! StartScreenViewController
         
+        let router = Assembler.resolve(StartScreenRouter.self, with: vc)
+        vc.viewModel = Assembler.resolve(StartScreenViewModel.self, with: router)
         
-        return viewController
+        return vc
     }
     
 }

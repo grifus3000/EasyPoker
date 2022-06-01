@@ -10,19 +10,20 @@ import UIKit
 
 class TabBarContainerModule {
     static func register() {
-        let router = TabBarContainerRouter()
-        let viewModel = TabBarContainerViewModel()
-        
-        Assembler.register(type: TabBarContainerRouter.self, instance: router)
-        Assembler.register(type: TabBarContainerViewModel.self, instance: viewModel)
+        Assembler.register(type: TabBarContainerRouter.self, closure: {
+            return TabBarContainerRouter()
+        })
+                           
+        Assembler.register(type: TabBarContainerViewModel.self, closure: {
+            TabBarContainerViewModel()
+        })
     }
     
     static func setupViewController() -> TabBarContainerViewController {
         let storyboard = UIStoryboard(name: "TabBarContainer", bundle: .main)
         let viewController = storyboard.instantiateViewController(withIdentifier: "TabBarContainer") as! TabBarContainerViewController
         
-        let viewModel = Assembler.resolve(type: TabBarContainerViewModel.self)
-        viewController.viewModel = viewModel
+        viewController.viewModel = Assembler.resolve(type: TabBarContainerViewModel.self)
         
         return viewController
     }
