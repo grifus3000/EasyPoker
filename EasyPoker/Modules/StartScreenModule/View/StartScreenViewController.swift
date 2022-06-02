@@ -12,10 +12,6 @@ class StartScreenViewController: ViewController<StartScreenViewModeling> {
     
     private var playersTableView: MainTableViewController?
     
-    @IBAction func addPlayerButton(_ sender: Any) {
-        viewModel?.showPlayerSettings()
-    }
-    
     override func viewDidLoad() {
         viewModel?.completion = { [weak self] player in
             self?.playersTableView?.append(player: player)
@@ -29,5 +25,12 @@ class StartScreenViewController: ViewController<StartScreenViewModeling> {
         }
     }
     
+    @IBAction private func addPlayerButton(_ sender: Any) {
+        viewModel?.showPlayerSettings()
+    }
+    
+    @IBAction func startGameButton(_ sender: Any) {
+        viewModel?.presentGameProcess()
+    }
     
 }

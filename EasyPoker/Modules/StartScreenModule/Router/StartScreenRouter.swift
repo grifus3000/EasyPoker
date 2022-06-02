@@ -13,4 +13,9 @@ class StartScreenRouter: Router, StartScreenRouting {
         playerSettingsVC.viewModel?.delegate = delegate
         viewController?.show(playerSettingsVC, sender: nil)
     }
+    
+    func presentGameProcess() {
+        let gameProcessVC = ProcessGameModule.setupViewController()
+        viewController?.navigationController?.pushViewController(gameProcessVC, animated: true)
+    }
 }

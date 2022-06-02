@@ -40,10 +40,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let image2 = UIImage(named: "CombinationsIcon")
         let item2 = UITabBarItem(title: "Combinations", image: image2, selectedImage: nil)
         item2.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Itim-Regular", size: 20)], for: .normal)
+        
+        item2.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: itemOffset)
+        item2.imageInsets = UIEdgeInsets(top: itemOffset, left: 0, bottom: -itemOffset, right: 0)
+        
         combinationsVC.tabBarItem = item2
         
+        let navigationController = UINavigationController(rootViewController: startVC)
+        navigationController.isToolbarHidden = true
+        navigationController.isNavigationBarHidden = true
+        
         vc.tabBarVC!.viewControllers = [
-            startVC,
+            navigationController,
             combinationsVC
         ]
         

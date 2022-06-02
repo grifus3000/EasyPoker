@@ -51,5 +51,6 @@ extension Assembler {
         StartScreenModule.register()
         CombinationsModule.register()
         PlayerSettingsModule.register()
+        ProcessGameModule.register()
     }
 }

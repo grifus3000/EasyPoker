@@ -69,6 +69,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Start game">
                                     <fontDescription key="titleFontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="24"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="startGameButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ygn-N1-y0U"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderFooter" translatesAutoresizingMaskIntoConstraints="NO" id="uMi-Wi-Bn0">
                                 <rect key="frame" x="25" y="380" width="364" height="10"/>

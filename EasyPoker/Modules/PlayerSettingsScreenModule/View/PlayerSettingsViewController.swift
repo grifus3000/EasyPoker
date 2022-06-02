@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class PlayerSettingsViewController: ViewController<PlayerSettingsViewModel> {
+class PlayerSettingsViewController: ViewController<PlayerSettingsViewModeling> {
     
     @IBOutlet weak var playerNameLable: UITextField!
     @IBOutlet weak var playerChipsLable: UITextField!

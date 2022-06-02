@@ -14,6 +14,10 @@ class StartScreenViewModel: ViewModel<StartScreenRouting>, StartScreenViewModeli
     func showPlayerSettings() {
         router?.presentPlayerSettings(delegate: self)
     }
+    
+    func presentGameProcess() {
+        router?.presentGameProcess()
+    }
 }
 
 extension StartScreenViewModel: PlayerSettingsViewModelDelegate {

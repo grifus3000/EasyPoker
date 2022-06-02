@@ -8,5 +8,6 @@
 import Foundation
 
 protocol PlayerSettingsViewModeling {
+    var delegate: PlayerSettingsViewModelDelegate? { get set }
     func createPlayer(name: String?, chips: String?)
 }

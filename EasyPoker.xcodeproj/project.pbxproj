@@ -14,6 +14,12 @@
 		26225028283E87E800E7ED57 /* CombinationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26225027283E87E800E7ED57 /* CombinationsRouter.swift */; };
 		2622502A283E8B5D00E7ED57 /* PlayerSettingsRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26225029283E8B5D00E7ED57 /* PlayerSettingsRouting.swift */; };
 		2622502C283E8B7500E7ED57 /* CombinationsRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2622502B283E8B7500E7ED57 /* CombinationsRouting.swift */; };
+		262C55962848FF1F004DF911 /* ProcessGameModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C55952848FF1F004DF911 /* ProcessGameModule.swift */; };
+		262C55982849019F004DF911 /* ProcessGameRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C55972849019F004DF911 /* ProcessGameRouting.swift */; };
+		262C559A284901A5004DF911 /* ProcessGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C5599284901A5004DF911 /* ProcessGameRouter.swift */; };
+		262C559C284901BD004DF911 /* ProcessGameViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C559B284901BD004DF911 /* ProcessGameViewModeling.swift */; };
+		262C559E284901C9004DF911 /* ProcessGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C559D284901C9004DF911 /* ProcessGameViewModel.swift */; };
+		262C55A0284901E1004DF911 /* ProcessGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C559F284901E1004DF911 /* ProcessGameViewController.swift */; };
 		263ABB33282E85D1005B173E /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263ABB31282E85D1005B173E /* MainTableViewCell.swift */; };
 		263ABB34282E85D1005B173E /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263ABB32282E85D1005B173E /* MainTableViewCell.xib */; };
 		263ABB36282EB62B005B173E /* ProcessScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263ABB35282EB62B005B173E /* ProcessScreen.storyboard */; };
@@ -64,6 +70,12 @@
 		26225027283E87E800E7ED57 /* CombinationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationsRouter.swift; sourceTree = "<group>"; };
 		26225029283E8B5D00E7ED57 /* PlayerSettingsRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettingsRouting.swift; sourceTree = "<group>"; };
 		2622502B283E8B7500E7ED57 /* CombinationsRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationsRouting.swift; sourceTree = "<group>"; };
+		262C55952848FF1F004DF911 /* ProcessGameModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessGameModule.swift; sourceTree = "<group>"; };
+		262C55972849019F004DF911 /* ProcessGameRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessGameRouting.swift; sourceTree = "<group>"; };
+		262C5599284901A5004DF911 /* ProcessGameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessGameRouter.swift; sourceTree = "<group>"; };
+		262C559B284901BD004DF911 /* ProcessGameViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessGameViewModeling.swift; sourceTree = "<group>"; };
+		262C559D284901C9004DF911 /* ProcessGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessGameViewModel.swift; sourceTree = "<group>"; };
+		262C559F284901E1004DF911 /* ProcessGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessGameViewController.swift; sourceTree = "<group>"; };
 		263ABB31282E85D1005B173E /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		263ABB32282E85D1005B173E /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		263ABB35282EB62B005B173E /* ProcessScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProcessScreen.storyboard; sourceTree = "<group>"; };
@@ -153,6 +165,32 @@
 				2622502B283E8B7500E7ED57 /* CombinationsRouting.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		262C55922848FEC3004DF911 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				262C55972849019F004DF911 /* ProcessGameRouting.swift */,
+				262C5599284901A5004DF911 /* ProcessGameRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		262C55932848FEC9004DF911 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				262C559B284901BD004DF911 /* ProcessGameViewModeling.swift */,
+				262C559D284901C9004DF911 /* ProcessGameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		262C55942848FED1004DF911 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				262C559F284901E1004DF911 /* ProcessGameViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		263ABB30282E85AF005B173E /* MainTableCell */ = {
@@ -256,6 +294,10 @@
 		263E0138282D030600AC0566 /* ProcessGameScreenModule */ = {
 			isa = PBXGroup;
 			children = (
+				262C55922848FEC3004DF911 /* Router */,
+				262C55932848FEC9004DF911 /* ViewModel */,
+				262C55942848FED1004DF911 /* View */,
+				262C55952848FF1F004DF911 /* ProcessGameModule.swift */,
 			);
 			path = ProcessGameScreenModule;
 			sourceTree = "<group>";
@@ -549,8 +591,10 @@
 				2622502C283E8B7500E7ED57 /* CombinationsRouting.swift in Sources */,
 				26AC28C1282E50DE00D6A9C8 /* CombinationsModule.swift in Sources */,
 				265619AA282D1EF1002A9F8F /* StartScreenViewController.swift in Sources */,
+				262C55982849019F004DF911 /* ProcessGameRouting.swift in Sources */,
 				26AC28B6282E3DED00D6A9C8 /* EPButton.swift in Sources */,
 				26225023283E812200E7ED57 /* PlayerSettingsRouter.swift in Sources */,
+				262C55962848FF1F004DF911 /* ProcessGameModule.swift in Sources */,
 				26B3ADCD2841148B00C12138 /* PlayerSettingsViewModeling.swift in Sources */,
 				265619A4282D1ECC002A9F8F /* StartScreenRouter.swift in Sources */,
 				26561999282D1860002A9F8F /* ViewModel.swift in Sources */,
@@ -560,6 +604,8 @@
 				263E013D282D03A400AC0566 /* TabBarContainerViewModel.swift in Sources */,
 				263ABB33282E85D1005B173E /* MainTableViewCell.swift in Sources */,
 				26AC28C5282E520300D6A9C8 /* CombinationsViewModel.swift in Sources */,
+				262C559C284901BD004DF911 /* ProcessGameViewModeling.swift in Sources */,
+				262C55A0284901E1004DF911 /* ProcessGameViewController.swift in Sources */,
 				26AC28C3282E51DA00D6A9C8 /* CombinationsViewController.swift in Sources */,
 				26AC28B1282E371400D6A9C8 /* MainTableViewController.swift in Sources */,
 				263E014D282D0FC500AC0566 /* TabBarContainerRouting.swift in Sources */,
@@ -578,6 +624,8 @@
 				26225025283E818B00E7ED57 /* PlayerSettingsViewModel.swift in Sources */,
 				26B3ADD02841178E00C12138 /* Model.swift in Sources */,
 				2622502A283E8B5D00E7ED57 /* PlayerSettingsRouting.swift in Sources */,
+				262C559A284901A5004DF911 /* ProcessGameRouter.swift in Sources */,
+				262C559E284901C9004DF911 /* ProcessGameViewModel.swift in Sources */,
 				265619A8282D1EDC002A9F8F /* StartScreenVeiwModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,4 +11,5 @@ protocol StartScreenViewModeling {
     var completion: ((_ player: Player) -> ())? { get set }
     
     func showPlayerSettings()
+    func presentGameProcess()
 }
