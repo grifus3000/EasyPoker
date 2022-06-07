@@ -7,14 +7,19 @@
 
 import UIKit
 
-class MainTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class MainTableViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var players: [Player] = [] {
-        didSet {
-            tableView.reloadData()
+    private var playersObservable: Observable<[Player]>?
+    
+    private var selectedIndex: IndexPath = IndexPath(row: 0, section: 0)
+    
+    var players: [Player]? {
+        guard let playersObservable = playersObservable else {
+            return nil
         }
+        return playersObservable.value
     }
     
     override func viewDidLoad() {
@@ -27,28 +32,42 @@ class MainTableViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.delegate = self
     }
     
-    func append(player: Player) {
-        players.append(player)
+    func setup(_ playersObservable: Observable<[Player]>?) {
+        self.playersObservable = playersObservable
     }
+    
+    func selectCell(for indexPath: IndexPath) {
+        deselectCell(for: selectedIndex)
+        tableView.cellForRow(at: indexPath)?.backgroundColor = .black
+        selectedIndex = indexPath
+    }
+    
+    func deselectCell(for indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.backgroundColor = .clear
+    }
+}
 
-    // MARK: - Table view data source
+// MARK: - Table view data source
 
+extension MainTableViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return players.count
+        return players?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let players = players else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.cellId, for: indexPath) as! MainTableViewCell
         cell.setup(with: players[indexPath.row])
+        cell.layer.cornerRadius = 20
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.bounds.height / 2.5
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
 }

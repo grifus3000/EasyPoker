@@ -33,5 +33,8 @@ class PlayerSettingsViewController: ViewController<PlayerSettingsViewModeling> {
         dismiss(animated: true)
     }
     
+    @IBAction func cancelButton(_ sender: Any) {
+        dismiss(animated: true)
+    }
     
 }

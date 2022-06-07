@@ -4,8 +4,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Itim-Regular.ttf">
+            <string>Itim-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Process Game View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -14,13 +20,166 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFr-y8-mGX" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
+                                <rect key="frame" x="143" y="69" width="128" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Finish the round"/>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8x-Sb-jGn">
+                                <rect key="frame" x="25" y="176" width="364" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="EtB-NP-PwW"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="gmp-im-pCm" kind="embed" identifier="MainTableView" id="Wd2-Dv-2Mm"/>
+                                </connections>
+                            </containerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderFooter" translatesAutoresizingMaskIntoConstraints="NO" id="Wz1-Kd-yhT">
+                                <rect key="frame" x="25" y="166" width="364" height="10"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj8-Ye-dHl">
+                                <rect key="frame" x="10" y="110" width="394" height="36"/>
+                                <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your chips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F34-FK-OfC">
+                                <rect key="frame" x="10" y="411" width="394" height="36"/>
+                                <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoX-De-xdq">
+                                <rect key="frame" x="10" y="457" width="394" height="36"/>
+                                <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq7-oL-MUO">
+                                <rect key="frame" x="10" y="553" width="394" height="36"/>
+                                <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderFooter" translatesAutoresizingMaskIntoConstraints="NO" id="8lO-VJ-aNH">
+                                <rect key="frame" x="25" y="376" width="364" height="10"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OEj-hR-6bQ">
+                                <rect key="frame" x="8" y="513" width="398" height="31"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" systemColor="labelColor"/>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="o9R-lY-wmk">
+                                <rect key="frame" x="10" y="639" width="394" height="183"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1DA-mh-z6G">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="92"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJJ-fc-3hV" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Fold"/>
+                                                <connections>
+                                                    <action selector="foldButtonDidTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5eM-Tj-Xr8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jb9-ca-LX8" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="61" width="187" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Check"/>
+                                                <connections>
+                                                    <action selector="checkButtonDidTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eGZ-Wx-TrR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="PZ1-XM-5Ak">
+                                        <rect key="frame" x="207" y="0.0" width="187" height="92"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zt-pd-edV" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Call"/>
+                                                <connections>
+                                                    <action selector="callButtonDidTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xtB-oW-bNO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDX-q7-Zrm" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="61" width="187" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Raise"/>
+                                                <connections>
+                                                    <action selector="raiseButtonDidTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="78u-Dw-aau"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.63137254901960782" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="F34-FK-OfC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="477-nO-7S5"/>
+                            <constraint firstItem="8lO-VJ-aNH" firstAttribute="top" secondItem="G8x-Sb-jGn" secondAttribute="bottom" id="68G-an-nd9"/>
+                            <constraint firstItem="Wz1-Kd-yhT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="7hC-wo-zi5"/>
+                            <constraint firstItem="G8x-Sb-jGn" firstAttribute="top" secondItem="Wz1-Kd-yhT" secondAttribute="bottom" id="8o1-DH-JcG"/>
+                            <constraint firstItem="ZoX-De-xdq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="9lm-IY-1Xg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="o9R-lY-wmk" secondAttribute="bottom" constant="40" id="BjL-oi-FVj"/>
+                            <constraint firstItem="sj8-Ye-dHl" firstAttribute="top" secondItem="IFr-y8-mGX" secondAttribute="bottom" constant="10" id="Bq8-7P-6vN"/>
+                            <constraint firstItem="o9R-lY-wmk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="DPf-5O-3xC"/>
+                            <constraint firstItem="OEj-hR-6bQ" firstAttribute="top" secondItem="ZoX-De-xdq" secondAttribute="bottom" constant="20" id="HZA-xY-IC0"/>
+                            <constraint firstItem="F34-FK-OfC" firstAttribute="top" secondItem="8lO-VJ-aNH" secondAttribute="bottom" constant="25" id="Lgb-sk-55c"/>
+                            <constraint firstItem="ZoX-De-xdq" firstAttribute="top" secondItem="F34-FK-OfC" secondAttribute="bottom" constant="10" id="M12-K6-j0K"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="F34-FK-OfC" secondAttribute="trailing" constant="10" id="M4E-Ha-dPK"/>
+                            <constraint firstItem="Wz1-Kd-yhT" firstAttribute="top" secondItem="sj8-Ye-dHl" secondAttribute="bottom" constant="20" id="MQS-tu-Cuw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OEj-hR-6bQ" secondAttribute="trailing" constant="10" id="Q5X-Xb-HdH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="o9R-lY-wmk" secondAttribute="trailing" constant="10" id="RQt-fF-1Pn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZoX-De-xdq" secondAttribute="trailing" constant="10" id="U1m-xn-b8X"/>
+                            <constraint firstItem="8lO-VJ-aNH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="eG7-QN-ieP"/>
+                            <constraint firstItem="sq7-oL-MUO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="fJo-NK-G34"/>
+                            <constraint firstItem="sj8-Ye-dHl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="fel-hg-S3n"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wz1-Kd-yhT" secondAttribute="trailing" constant="25" id="gLA-0n-htO"/>
+                            <constraint firstItem="IFr-y8-mGX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="gXP-qc-iG8"/>
+                            <constraint firstItem="IFr-y8-mGX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="h5o-6B-JYZ"/>
+                            <constraint firstItem="G8x-Sb-jGn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="ihc-zU-xrA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8lO-VJ-aNH" secondAttribute="trailing" constant="25" id="jcz-VI-091"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sj8-Ye-dHl" secondAttribute="trailing" constant="10" id="n8h-Uc-uaH"/>
+                            <constraint firstItem="OEj-hR-6bQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="om7-CU-JpG"/>
+                            <constraint firstItem="sq7-oL-MUO" firstAttribute="top" secondItem="OEj-hR-6bQ" secondAttribute="bottom" constant="10" id="pKz-iJ-eRT"/>
+                            <constraint firstItem="o9R-lY-wmk" firstAttribute="top" secondItem="sq7-oL-MUO" secondAttribute="bottom" constant="50" id="ruq-7V-r60"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sq7-oL-MUO" secondAttribute="trailing" constant="10" id="tVQ-DI-TAM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="G8x-Sb-jGn" secondAttribute="trailing" constant="25" id="wPp-Ri-xlf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="betSlited" destination="OEj-hR-6bQ" id="sd2-vj-QGe"/>
+                        <outlet property="callButton" destination="3Zt-pd-edV" id="pRS-eb-BXO"/>
+                        <outlet property="checkButton" destination="jb9-ca-LX8" id="pPC-d2-vGw"/>
+                        <outlet property="foldButton" destination="ZJJ-fc-3hV" id="kUz-B6-gHL"/>
+                        <outlet property="raiseButton" destination="iDX-q7-Zrm" id="UDh-N8-3aa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17" y="92"/>
+            <point key="canvasLocation" x="15.942028985507248" y="91.741071428571431"/>
+        </scene>
+        <!--MainTableView-->
+        <scene sceneID="NyR-iz-Jxa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MainTableView" id="gmp-im-pCm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Vpg-vu-A1F"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qer-e5-zK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="28"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HeaderFooter" width="644" height="10"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

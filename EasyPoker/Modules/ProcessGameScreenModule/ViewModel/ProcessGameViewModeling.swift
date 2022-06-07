@@ -8,5 +8,13 @@
 import Foundation
 
 protocol ProcessGameViewModeling {
+    var players: Observable<[Player]>? { get set }
+    var currentPlayerIndexPath: Observable<IndexPath> { get set }
+    var maximumBet: Int { get set }
     
+    func foldButtonDidTapped()
+    func checkButtonDidTapped()
+    func callButtonDidTapped()
+    func raiseButtonDidTapped()
+    func startTheGame()
 }

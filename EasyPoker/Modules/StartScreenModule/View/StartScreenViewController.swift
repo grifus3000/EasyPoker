@@ -13,9 +13,8 @@ class StartScreenViewController: ViewController<StartScreenViewModeling> {
     private var playersTableView: MainTableViewController?
     
     override func viewDidLoad() {
-        viewModel?.completion = { [weak self] player in
-            self?.playersTableView?.append(player: player)
-        }
+        configureTableData()
+        configureObserver()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -25,8 +24,21 @@ class StartScreenViewController: ViewController<StartScreenViewModeling> {
         }
     }
     
+    private func configureTableData() {
+        guard let viewModel = viewModel else { return }
+        playersTableView?.setup(viewModel.players)
+    }
+    
+    private func configureObserver() {
+        guard let viewModel = viewModel else { return }
+        viewModel.players.addObserver(closure: { value in
+            self.playersTableView?.tableView.reloadData()
+        })
+    }
+    
     @IBAction private func addPlayerButton(_ sender: Any) {
         viewModel?.showPlayerSettings()
+        playersTableView?.tableView.reloadData()
     }
     
     @IBAction func startGameButton(_ sender: Any) {

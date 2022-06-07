@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -14,46 +15,46 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" rowHeight="86" id="KGk-i7-Jjw" customClass="MainTableViewCell" customModule="EasyPoker" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="406" height="86"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" rowHeight="-2" id="KGk-i7-Jjw" customClass="MainTableViewCell" customModule="EasyPoker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="122"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="406" height="86"/>
+                <rect key="frame" x="0.0" y="0.0" width="406" height="122"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0L-cK-1vF">
-                        <rect key="frame" x="166" y="10" width="60.5" height="29"/>
+                        <rect key="frame" x="172" y="10" width="60.5" height="29"/>
                         <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="24"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSQ-l5-os3">
-                        <rect key="frame" x="166" y="46" width="57.5" height="29"/>
-                        <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="24"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="jmZ-rJ-iia">
-                        <rect key="frame" x="10" y="10" width="66" height="66"/>
+                        <rect key="frame" x="10" y="10" width="102" height="102"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="jmZ-rJ-iia" secondAttribute="height" multiplier="1:1" id="VfI-fz-aSh"/>
-                            <constraint firstAttribute="width" constant="66" id="Zqa-lc-nHb"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSQ-l5-os3">
+                        <rect key="frame" x="172" y="82" width="57.5" height="29"/>
+                        <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="24"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
-                <color key="backgroundColor" red="0.63137254901960782" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="tintColor" systemColor="tintColor"/>
                 <constraints>
-                    <constraint firstItem="bSQ-l5-os3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="W0L-cK-1vF" secondAttribute="bottom" constant="5" id="1qf-XO-Le5"/>
-                    <constraint firstAttribute="bottom" secondItem="jmZ-rJ-iia" secondAttribute="bottom" constant="10" id="DCU-M5-6Wp"/>
-                    <constraint firstItem="bSQ-l5-os3" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="ElI-ff-bcn"/>
-                    <constraint firstItem="bSQ-l5-os3" firstAttribute="leading" secondItem="jmZ-rJ-iia" secondAttribute="trailing" constant="90" id="U0n-f4-I1t"/>
-                    <constraint firstItem="jmZ-rJ-iia" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="XJz-vn-zjk"/>
-                    <constraint firstItem="W0L-cK-1vF" firstAttribute="leading" secondItem="jmZ-rJ-iia" secondAttribute="trailing" constant="90" id="aIq-Sn-gAG"/>
-                    <constraint firstItem="jmZ-rJ-iia" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="aR3-ew-EFe"/>
-                    <constraint firstItem="W0L-cK-1vF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="qW3-rj-i2i"/>
+                    <constraint firstItem="jmZ-rJ-iia" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="BTo-7O-P6I"/>
+                    <constraint firstItem="bSQ-l5-os3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="W0L-cK-1vF" secondAttribute="bottom" constant="5" id="CHx-VB-I16"/>
+                    <constraint firstItem="bSQ-l5-os3" firstAttribute="leading" secondItem="jmZ-rJ-iia" secondAttribute="trailing" constant="60" id="POm-7y-09d"/>
+                    <constraint firstItem="jmZ-rJ-iia" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="dXK-a8-8gK"/>
+                    <constraint firstAttribute="bottom" secondItem="jmZ-rJ-iia" secondAttribute="bottom" constant="10" id="eXJ-b1-OzY"/>
+                    <constraint firstItem="W0L-cK-1vF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="h2V-d9-J1w"/>
+                    <constraint firstItem="W0L-cK-1vF" firstAttribute="leading" secondItem="jmZ-rJ-iia" secondAttribute="trailing" constant="60" id="ibh-b3-tek"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="bSQ-l5-os3" secondAttribute="bottom" id="rhG-8f-uin"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="avR-FX-lO2"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="PlayerChips" destination="bSQ-l5-os3" id="kTG-dD-YEx"/>
                 <outlet property="PlayerName" destination="W0L-cK-1vF" id="85F-cO-UX6"/>
@@ -62,10 +63,13 @@
                 <outlet property="playerName" destination="W0L-cK-1vF" id="wOC-65-H5A"/>
                 <outlet property="playerPhoto" destination="jmZ-rJ-iia" id="Aig-OC-vUh"/>
             </connections>
-            <point key="canvasLocation" x="200.00000000000003" y="121.875"/>
+            <point key="canvasLocation" x="191.30434782608697" y="175.44642857142856"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="AvatarPlaceholder" width="110" height="103"/>
+        <image name="AvatarPlaceholder" width="82" height="82"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

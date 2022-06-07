@@ -18,8 +18,14 @@ class MainTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        configureCell()
+    }
+    
     func configureCell() {
+        playerPhoto.layoutIfNeeded()
         playerPhoto.layer.cornerRadius = playerPhoto.bounds.height / 2
     }
     
@@ -28,13 +34,7 @@ class MainTableViewCell: UITableViewCell {
         playerChips.text = String(player.chips)
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        configureCell()
-    }
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }
