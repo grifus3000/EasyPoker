@@ -11,13 +11,14 @@ class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameViewModeli
     var players: Observable<[Player]>?
     var currentPlayerIndexPath: Observable<IndexPath> = Observable(value: IndexPath(row: 0, section: 0))
     var maximumBet: Int = 0
-    private var isGameStart = true
+    var bankAmount: Int = 0
+    private var isGameStarted = false
     
     func startTheGame() {
-        guard isGameStart else {
-            isGameStart = false
+        guard !isGameStarted else {
             return
         }
+        isGameStarted = true
         currentPlayerIndexPath.value = IndexPath(row: 0, section: 0)
     }
     

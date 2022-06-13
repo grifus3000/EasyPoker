@@ -9,7 +9,7 @@ import Foundation
 
 class StartScreenViewModel: ViewModel<StartScreenRouting>, StartScreenViewModeling {
     
-    var players: Observable<[Player]> = Observable(value: [Player(name: "ONE", chips: 12), Player(name: "TWO", chips: 213)])
+    var players: Observable<[Player]> = Observable(value: [Player(name: "ONE", chips: 12), Player(name: "TWO", chips: 213), Player(name: "Three", chips: 1000)])
     
     func showPlayerSettings() {
         router?.presentPlayerSettings(delegate: self)

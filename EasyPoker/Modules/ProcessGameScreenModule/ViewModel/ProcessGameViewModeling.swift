@@ -10,6 +10,7 @@ import Foundation
 protocol ProcessGameViewModeling {
     var players: Observable<[Player]>? { get set }
     var currentPlayerIndexPath: Observable<IndexPath> { get set }
+    var bankAmount: Int { get set }
     var maximumBet: Int { get set }
     
     func foldButtonDidTapped()
