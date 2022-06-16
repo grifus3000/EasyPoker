@@ -7,15 +7,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FA49DCA1-7364-4481-B70A-289463CA4245"
+            uuid = "5B317FC2-343D-453C-AE32-8D6BC37267FC"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EasyPoker/Modules/ProcessGameScreenModule/ViewModel/ProcessGameViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "nextPlayer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,16 +23,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "77618978-44BE-4DC2-8F2B-8DEDF7413DFC"
+            uuid = "9C348DAC-C561-4ADF-9D89-97927C800FB0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EasyPoker/UI/Controls/MainTable/MainTableViewController.swift"
+            filePath = "EasyPoker/Modules/StartScreenModule/Model/Model.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "deselectCell(for:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "changeStateInGame(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "627FD960-EA19-40AB-A326-B3AD722FB0B5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EasyPoker/Modules/ProcessGameScreenModule/ViewModel/ProcessGameViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "raiseButtonDidTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6DCB9764-0C13-40BD-B05F-5DACAE44DAF3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EasyPoker/Modules/ProcessGameScreenModule/ViewModel/ProcessGameViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "callButtonDidTapped()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -9,6 +9,8 @@ import UIKit
 
 class EPButton: UIButton {
 
+    let customTitle: String = "Finish the round"
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -26,12 +28,15 @@ class EPButton: UIButton {
         config.background.backgroundColor = .black
         config.background.cornerRadius = 20
         
-        let container = AttributeContainer([NSAttributedString.Key.font : UIFont(name: "Itim-Regular", size: 24)])
-        let title = AttributedString(titleLabel?.text ?? "", attributes: container)
-        
-        config.attributedTitle = title
-        
         self.configuration = config
+        setTitle(titleLabel?.text ?? "")
+    }
+    
+    func setTitle(_ title: String) {
+        let container = AttributeContainer([NSAttributedString.Key.font : UIFont(name: "Itim-Regular", size: 24)])
+        let localTitle = AttributedString(title, attributes: container)
+        
+        configuration?.attributedTitle = localTitle
     }
     
 }

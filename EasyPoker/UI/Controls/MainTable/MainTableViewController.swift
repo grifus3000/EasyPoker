@@ -7,13 +7,27 @@
 
 import UIKit
 
+protocol MainTableViewControllerDelegate: AnyObject {
+    func winnerWasSelected(with indexPath: IndexPath)
+}
+
 class MainTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     private var playersObservable: Observable<[Player]>?
+    private var selectedIndexPath: IndexPath?
     
-    private var selectedIndex: IndexPath = IndexPath(row: 0, section: 0)
+    var observableState: Observable<TableState> = Observable(value: .displayingInformation)
+    var state: TableState {
+        get {
+            return observableState.value ?? .displayingInformation
+        }
+        set {
+            observableState.value = newValue
+        }
+    }
+    var isBetHidden = true
     
     var players: [Player]? {
         guard let playersObservable = playersObservable else {
@@ -21,6 +35,8 @@ class MainTableViewController: UIViewController {
         }
         return playersObservable.value
     }
+    
+    weak var delegate: MainTableViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +53,8 @@ class MainTableViewController: UIViewController {
     }
     
     func selectCell(for indexPath: IndexPath) {
-        deselectCell(for: selectedIndex)
-        tableView.cellForRow(at: indexPath)?.backgroundColor = .black
-        selectedIndex = indexPath
-    }
-    
-    func deselectCell(for indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)?.backgroundColor = .clear
+        selectedIndexPath = indexPath
+        tableView.reloadData()
     }
 }
 
@@ -59,7 +70,15 @@ extension MainTableViewController: UITableViewDataSource, UITableViewDelegate {
         guard let players = players else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.cellId, for: indexPath) as! MainTableViewCell
         cell.setup(with: players[indexPath.row])
+        cell.setup(bet: isBetHidden)
+        
         cell.layer.cornerRadius = 20
+        if let selectedIndexPath = selectedIndexPath, selectedIndexPath == indexPath {
+            cell.backgroundColor = .black
+        } else {
+            cell.backgroundColor = .clear
+        }
+        
         return cell
     }
 
@@ -68,6 +87,14 @@ extension MainTableViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        switch state {
+        case .displayingInformation:
+            tableView.deselectRow(at: indexPath, animated: false)
+        case .choosingTheWinner:
+            state = .displayingInformation
+            delegate?.winnerWasSelected(with: indexPath)
+            tableView.deselectRow(at: indexPath, animated: false)
+        }
+        
     }
 }

@@ -40,14 +40,23 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiT-dJ-FCA">
+                        <rect key="frame" x="340" y="46.5" width="36" height="29"/>
+                        <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="24"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="tintColor" systemColor="tintColor"/>
                 <constraints>
                     <constraint firstItem="jmZ-rJ-iia" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="BTo-7O-P6I"/>
                     <constraint firstItem="bSQ-l5-os3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="W0L-cK-1vF" secondAttribute="bottom" constant="5" id="CHx-VB-I16"/>
                     <constraint firstItem="bSQ-l5-os3" firstAttribute="leading" secondItem="jmZ-rJ-iia" secondAttribute="trailing" constant="60" id="POm-7y-09d"/>
+                    <constraint firstItem="CiT-dJ-FCA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="W0L-cK-1vF" secondAttribute="trailing" constant="10" id="QdU-14-C7L"/>
+                    <constraint firstAttribute="trailing" secondItem="CiT-dJ-FCA" secondAttribute="trailing" constant="30" id="YGq-iq-O0j"/>
                     <constraint firstItem="jmZ-rJ-iia" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="dXK-a8-8gK"/>
                     <constraint firstAttribute="bottom" secondItem="jmZ-rJ-iia" secondAttribute="bottom" constant="10" id="eXJ-b1-OzY"/>
+                    <constraint firstItem="CiT-dJ-FCA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fTx-Jj-Hpf"/>
                     <constraint firstItem="W0L-cK-1vF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="h2V-d9-J1w"/>
                     <constraint firstItem="W0L-cK-1vF" firstAttribute="leading" secondItem="jmZ-rJ-iia" secondAttribute="trailing" constant="60" id="ibh-b3-tek"/>
                     <constraint firstAttribute="bottomMargin" secondItem="bSQ-l5-os3" secondAttribute="bottom" id="rhG-8f-uin"/>
@@ -59,6 +68,7 @@
                 <outlet property="PlayerChips" destination="bSQ-l5-os3" id="kTG-dD-YEx"/>
                 <outlet property="PlayerName" destination="W0L-cK-1vF" id="85F-cO-UX6"/>
                 <outlet property="PlayerPhoto" destination="jmZ-rJ-iia" id="mYh-eL-ggE"/>
+                <outlet property="playerBet" destination="CiT-dJ-FCA" id="NK7-i2-TEL"/>
                 <outlet property="playerChips" destination="bSQ-l5-os3" id="6nc-iP-I1j"/>
                 <outlet property="playerName" destination="W0L-cK-1vF" id="wOC-65-H5A"/>
                 <outlet property="playerPhoto" destination="jmZ-rJ-iia" id="Aig-OC-vUh"/>
