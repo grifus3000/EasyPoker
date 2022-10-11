@@ -9,10 +9,11 @@ import Foundation
 import UIKit
 
 class PlayerSettingsViewController: ViewController<PlayerSettingsViewModeling> {
+    // MARK: - IBOutlets
     
-    @IBOutlet weak var playerNameLable: UITextField!
-    @IBOutlet weak var playerChipsLable: UITextField!
-    @IBOutlet weak var playerAvatar: UIImageView!
+    @IBOutlet private weak var playerNameLable: UITextField!
+    @IBOutlet private weak var playerChipsLable: UITextField!
+    @IBOutlet private weak var playerAvatar: UIImageView!
     
     // MARK: Lifecycle
     
@@ -26,7 +27,7 @@ class PlayerSettingsViewController: ViewController<PlayerSettingsViewModeling> {
         playerAvatar.layer.cornerRadius = playerAvatar.bounds.height / 2
     }
     
-    // MARK: Logic
+    // MARK: IBActions
     
     @IBAction func createButton(_ sender: Any) {
         viewModel?.createPlayer(name: playerNameLable.text, chips: playerChipsLable.text)

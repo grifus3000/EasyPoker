@@ -11,12 +11,17 @@ protocol MainTableViewControllerDelegate: AnyObject {
     func winnerWasSelected(with indexPath: IndexPath)
 }
 
-class MainTableViewController: UIViewController {
+final class MainTableViewController: UIViewController {
+    // MARK: - IBOutlets
     
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Private Properties
+    
     private var playersObservable: Observable<[Player]>?
     private var selectedIndexPath: IndexPath?
+    
+    // MARK: - Public Properties
     
     var observableState: Observable<TableState> = Observable(value: .displayingInformation)
     var state: TableState {
@@ -38,6 +43,8 @@ class MainTableViewController: UIViewController {
     
     weak var delegate: MainTableViewControllerDelegate?
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +54,8 @@ class MainTableViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    // MARK: - Public Methods
     
     func setup(_ playersObservable: Observable<[Player]>?) {
         self.playersObservable = playersObservable

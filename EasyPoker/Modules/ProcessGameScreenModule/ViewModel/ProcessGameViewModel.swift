@@ -7,14 +7,30 @@
 
 import Foundation
 
-class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameViewModeling {
+final class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameViewModeling {
+    // MARK: - Private Properties
+    
+    private var isGameStarted = false
+    
+    private var isEndOfCircle: Bool {
+        var result = true
+        players?.value?.forEach({ player in
+            if player.state == .needToCall {
+                result = false
+                return
+            }
+        })
+        return result
+    }
+    
+    // MARK: - Public Properties
+    
     var players: Observable<[Player]>?
     var currentPlayerIndexPath: Observable<IndexPath> = Observable(value: IndexPath(row: 0, section: 0))
     var currentBet: Int = 0
     var maximumBet: Int = 0
     var bankAmount: Int = 0
     var bets: Int = 0
-    private var isGameStarted = false
     
     var currentPlayer: Player {
             guard let indexPath = currentPlayerIndexPath.value, let player = players?.value?[indexPath.row] else {
@@ -22,6 +38,8 @@ class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameViewModeli
             }
             return player
     }
+    
+    // MARK: - Public Methods
     
     func startTheGame() {
         guard !isGameStarted else {
@@ -43,7 +61,7 @@ class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameViewModeli
     func callButtonDidTapped() {
         callBet()
         currentPlayer.changeStateInGame(with: maximumBet)
-        if isEndOfCircle() {
+        if isEndOfCircle {
             endOfCircle()
         } else {
             nextPlayer()
@@ -53,12 +71,14 @@ class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameViewModeli
     func raiseButtonDidTapped() {
         raiseBet()
         resetPlayersStateInGame(except: currentPlayer)
-        if isEndOfCircle() {
+        if isEndOfCircle {
             endOfCircle()
         } else {
             nextPlayer()
         }
     }
+    
+    // MARK: Private methods
     
     private func callBet() {
         let minimumBetForCall = minimumBetForCall()
@@ -107,25 +127,6 @@ class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameViewModeli
         if currentPlayer.state == .fold, currentPlayer.state == .inactive, currentPlayer.state == .readyToContinue {
             nextPlayer()
         }
-    }
-    
-    private func isEndOfCircle() -> Bool {
-//        var result = true
-//        players?.value?.forEach({ player in
-//            if player.bet != maximumBet {
-//                result = false
-//                return
-//            }
-//        })
-//        return result
-        var result = true
-        players?.value?.forEach({ player in
-            if player.state == .needToCall {
-                result = false
-                return
-            }
-        })
-        return result
     }
     
     private func endOfCircle() {

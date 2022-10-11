@@ -7,14 +7,19 @@
 
 import UIKit
 
-class MainTableViewCell: UITableViewCell {
+final class MainTableViewCell: UITableViewCell {
+    // MARK: - IBOutlets
+    
+    @IBOutlet private weak var playerPhoto: UIImageView!
+    @IBOutlet private weak var playerName: UILabel!
+    @IBOutlet private weak var playerChips: UILabel!
+    @IBOutlet private weak var playerBet: UILabel!
+    
+    // MARK: - Static Properties
     
     static let cellId = "MainTableViewCell"
     
-    @IBOutlet weak var playerPhoto: UIImageView!
-    @IBOutlet weak var playerName: UILabel!
-    @IBOutlet weak var playerChips: UILabel!
-    @IBOutlet weak var playerBet: UILabel!
+    // MARK: - Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,10 +30,18 @@ class MainTableViewCell: UITableViewCell {
         configureCell()
     }
     
-    func configureCell() {
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+    // MARK: - Private Methods
+
+    private func configureCell() {
         playerPhoto.layoutIfNeeded()
         playerPhoto.layer.cornerRadius = playerPhoto.bounds.height / 2
     }
+    
+    // MARK: - Public Methods
     
     func setup(with player: Player) {
         playerName.text = player.name
@@ -38,9 +51,5 @@ class MainTableViewCell: UITableViewCell {
     
     func setup(bet isHidden: Bool) {
         playerBet.isHidden = isHidden
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
     }
 }

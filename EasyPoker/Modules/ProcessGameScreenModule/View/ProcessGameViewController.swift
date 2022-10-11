@@ -8,19 +8,25 @@
 import Foundation
 import UIKit
 
-class ProcessGameViewController: ViewController<ProcessGameViewModeling> {
-    @IBOutlet weak var foldButton: EPButton!
-    @IBOutlet weak var checkButton: EPButton!
-    @IBOutlet weak var callButton: EPButton!
-    @IBOutlet weak var raiseButton: EPButton!
-    @IBOutlet weak var finishTheRoundButton: EPButton!
-    @IBOutlet weak var betSlider: UISlider!
-    @IBOutlet weak var sliderValueLabel: UILabel!
-    @IBOutlet weak var playerChipsLabel: UILabel!
-    @IBOutlet weak var bankAmountLabel: UILabel!
-    @IBOutlet weak var betsAmountLabel: UILabel!
+final class ProcessGameViewController: ViewController<ProcessGameViewModeling> {
+    // MARK: - IBOutlets
+    
+    @IBOutlet private weak var foldButton: EPButton!
+    @IBOutlet private weak var checkButton: EPButton!
+    @IBOutlet private weak var callButton: EPButton!
+    @IBOutlet private weak var raiseButton: EPButton!
+    @IBOutlet private weak var finishTheRoundButton: EPButton!
+    @IBOutlet private weak var betSlider: UISlider!
+    @IBOutlet private weak var sliderValueLabel: UILabel!
+    @IBOutlet private weak var playerChipsLabel: UILabel!
+    @IBOutlet private weak var bankAmountLabel: UILabel!
+    @IBOutlet private weak var betsAmountLabel: UILabel!
+    
+    // MARK: - Private Properties
     
     private var playersTableView: MainTableViewController?
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +43,8 @@ class ProcessGameViewController: ViewController<ProcessGameViewModeling> {
         }
     }
 
+    // MARK: - Private Methods
+    
     private func configureTable() {
         playersTableView?.setup(viewModel?.players)
         playersTableView?.delegate = viewModel
@@ -75,6 +83,8 @@ class ProcessGameViewController: ViewController<ProcessGameViewModeling> {
         bankAmountLabel.text = String(viewModel?.bankAmount ?? 0)
         betsAmountLabel.text = String(viewModel?.bets ?? 0)
     }
+    
+    // MARK: - IBActions
     
     @IBAction func foldButtonDidTapped(_ sender: Any) {
         viewModel?.foldButtonDidTapped()

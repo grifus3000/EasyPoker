@@ -7,9 +7,8 @@
 
 import UIKit
 
-class EPButton: UIButton {
-
-    let customTitle: String = "Finish the round"
+final class EPButton: UIButton {
+    // MARK: - Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,7 +22,9 @@ class EPButton: UIButton {
         configureButton()
     }
     
-    func configureButton() {
+    // MARK: - Private Methods
+    
+    private func configureButton() {
         var config = UIButton.Configuration.filled()
         config.background.backgroundColor = .black
         config.background.cornerRadius = 20
@@ -31,6 +32,8 @@ class EPButton: UIButton {
         self.configuration = config
         setTitle(titleLabel?.text ?? "")
     }
+    
+    // MARK: - Public Methods
     
     func setTitle(_ title: String) {
         let container = AttributeContainer([NSAttributedString.Key.font : UIFont(name: "Itim-Regular", size: 24)])

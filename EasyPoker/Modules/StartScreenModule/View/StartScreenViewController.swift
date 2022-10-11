@@ -8,9 +8,12 @@
 import Foundation
 import UIKit
 
-class StartScreenViewController: ViewController<StartScreenViewModeling> {
+final class StartScreenViewController: ViewController<StartScreenViewModeling> {
+    // MARK: - Private Properties
     
     private var playersTableView: MainTableViewController?
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         configureTableData()
@@ -24,6 +27,8 @@ class StartScreenViewController: ViewController<StartScreenViewModeling> {
         }
     }
     
+    // MARK: - Private Methods
+    
     private func configureTableData() {
         guard let viewModel = viewModel else { return }
         playersTableView?.setup(viewModel.players)
@@ -35,6 +40,8 @@ class StartScreenViewController: ViewController<StartScreenViewModeling> {
             self.playersTableView?.tableView.reloadData()
         })
     }
+    
+    // MARK: - IBActions
     
     @IBAction private func addPlayerButton(_ sender: Any) {
         viewModel?.showPlayerSettings()

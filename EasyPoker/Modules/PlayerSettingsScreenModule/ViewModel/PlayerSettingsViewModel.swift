@@ -11,9 +11,12 @@ protocol PlayerSettingsViewModelDelegate: AnyObject {
     func sendPlayer(_ player: Player)
 }
 
-class PlayerSettingsViewModel: ViewModel<PlayerSettingsRouting>, PlayerSettingsViewModeling {
+final class PlayerSettingsViewModel: ViewModel<PlayerSettingsRouting>, PlayerSettingsViewModeling {
+    // MARK: - Public Properties
     
     weak var delegate: PlayerSettingsViewModelDelegate?
+    
+    // MARK: - Public Methods
     
     func createPlayer(name: String?, chips: String?) {
         guard let name = name, let chips = chips else {

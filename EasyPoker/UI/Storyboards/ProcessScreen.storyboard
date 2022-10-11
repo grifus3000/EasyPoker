@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFr-y8-mGX" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
-                                <rect key="frame" x="143" y="59" width="128" height="31"/>
+                                <rect key="frame" x="134" y="63" width="146.5" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Finish the round"/>
                                 <connections>
@@ -31,46 +32,43 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8x-Sb-jGn">
-                                <rect key="frame" x="25" y="156" width="364" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="EtB-NP-PwW"/>
-                                </constraints>
+                                <rect key="frame" x="25" y="163.5" width="364" height="218.5"/>
                                 <connections>
                                     <segue destination="gmp-im-pCm" kind="embed" identifier="MainTableView" id="Wd2-Dv-2Mm"/>
                                 </connections>
                             </containerView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderFooter" translatesAutoresizingMaskIntoConstraints="NO" id="Wz1-Kd-yhT">
-                                <rect key="frame" x="25" y="146" width="364" height="10"/>
+                                <rect key="frame" x="25" y="153.5" width="364" height="10"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj8-Ye-dHl">
-                                <rect key="frame" x="10" y="105" width="394" height="36"/>
+                                <rect key="frame" x="10" y="112.5" width="394" height="36"/>
                                 <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your chips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F34-FK-OfC">
-                                <rect key="frame" x="10" y="519" width="394" height="36"/>
+                                <rect key="frame" x="10" y="545" width="394" height="36"/>
                                 <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoX-De-xdq">
-                                <rect key="frame" x="10" y="565" width="394" height="36"/>
+                                <rect key="frame" x="10" y="591" width="394" height="36"/>
                                 <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq7-oL-MUO">
-                                <rect key="frame" x="10" y="661" width="394" height="36"/>
+                                <rect key="frame" x="10" y="687" width="394" height="36"/>
                                 <fontDescription key="fontDescription" name="Itim-Regular" family="Itim" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderFooter" translatesAutoresizingMaskIntoConstraints="NO" id="8lO-VJ-aNH">
-                                <rect key="frame" x="25" y="356" width="364" height="10"/>
+                                <rect key="frame" x="25" y="382" width="364" height="10"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OEj-hR-6bQ">
-                                <rect key="frame" x="8" y="621" width="398" height="31"/>
+                                <rect key="frame" x="8" y="647" width="398" height="31"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="thumbTintColor" systemColor="labelColor"/>
@@ -79,13 +77,13 @@
                                 </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="o9R-lY-wmk">
-                                <rect key="frame" x="10" y="717" width="394" height="125"/>
+                                <rect key="frame" x="10" y="743" width="394" height="99"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1DA-mh-z6G">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="92"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="99"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJJ-fc-3hV" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="34.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Fold"/>
                                                 <connections>
@@ -93,7 +91,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jb9-ca-LX8" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="61" width="187" height="31"/>
+                                                <rect key="frame" x="0.0" y="64.5" width="187" height="34.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Check"/>
                                                 <connections>
@@ -103,10 +101,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="PZ1-XM-5Ak">
-                                        <rect key="frame" x="207" y="0.0" width="187" height="92"/>
+                                        <rect key="frame" x="207" y="0.0" width="187" height="99"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zt-pd-edV" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="34.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Call"/>
                                                 <connections>
@@ -114,7 +112,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDX-q7-Zrm" customClass="EPButton" customModule="EasyPoker" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="61" width="187" height="31"/>
+                                                <rect key="frame" x="0.0" y="64.5" width="187" height="34.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Raise"/>
                                                 <connections>
@@ -126,7 +124,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CDQ-if-C0e">
-                                <rect key="frame" x="30" y="376" width="354" height="128"/>
+                                <rect key="frame" x="30" y="402" width="354" height="128"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HT1-KF-Sxc">
                                         <rect key="frame" x="0.0" y="0.0" width="77.5" height="128"/>
@@ -238,7 +236,7 @@
     <resources>
         <image name="HeaderFooter" width="644" height="10"/>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
