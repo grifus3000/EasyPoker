@@ -28,7 +28,9 @@ class Player {
     private(set) var state: PlayerState = .needToCall
     
     func changeStateInGame(with maxBet: Int) {
-        guard state != .inactive, state != .fold, state != .readyToContinue else {
+        guard state != .inactive,
+              state != .fold,
+              state != .readyToContinue else {
             return
         }
         
@@ -43,7 +45,9 @@ class Player {
     }
     
     func resetStateInGame() {
-        guard state != .inactive, state != .fold, chips != 0 else {
+        guard state != .inactive,
+              state != .fold,
+              chips != 0 else {
             return
         }
         

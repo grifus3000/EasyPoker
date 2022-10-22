@@ -25,11 +25,10 @@ final class EPButton: UIButton {
     // MARK: - Private Methods
     
     private func configureButton() {
-        var config = UIButton.Configuration.filled()
-        config.background.backgroundColor = .black
-        config.background.cornerRadius = 20
-        
-        self.configuration = config
+        layer.cornerRadius = 20
+        backgroundColor = .black
+        tintColor = .white
+
         setTitle(titleLabel?.text ?? "")
     }
     
@@ -41,5 +40,4 @@ final class EPButton: UIButton {
         
         configuration?.attributedTitle = localTitle
     }
-    
 }

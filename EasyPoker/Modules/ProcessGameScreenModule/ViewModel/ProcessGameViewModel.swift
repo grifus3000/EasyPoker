@@ -23,6 +23,22 @@ final class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameView
         return result
     }
     
+    private var minimumBetForCall: Int {
+        maximumBet - (currentPlayer.bet ?? 0)
+    }
+    
+    private var playerCanCall: Bool {
+        return maximumBet != 0
+    }
+    
+    private var playerCanCheck: Bool {
+        return maximumBet == 0
+    }
+    
+    private var playerCanRaise: Bool {
+        return (currentBet + (currentPlayer.bet ?? 0)) > maximumBet
+    }
+    
     // MARK: - Public Properties
     
     var players: Observable<[Player]>?
@@ -33,10 +49,27 @@ final class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameView
     var bets: Int = 0
     
     var currentPlayer: Player {
-            guard let indexPath = currentPlayerIndexPath.value, let player = players?.value?[indexPath.row] else {
+            guard let indexPath = currentPlayerIndexPath.value,
+                  let player = players?.value?[indexPath.row] else {
                 fatalError("No player or index in ProcessGameViewModel array")
             }
             return player
+    }
+    
+    var foldButtonEnabled: Bool {
+        return true
+    }
+    
+    var callButtonColorEnabled: Bool {
+        playerCanCall
+    }
+    
+    var checkButtonColorEnabled: Bool {
+        playerCanCheck
+    }
+    
+    var raiseButtonColorEnabled: Bool {
+        playerCanRaise
     }
     
     // MARK: - Public Methods
@@ -55,10 +88,18 @@ final class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameView
     }
     
     func checkButtonDidTapped() {
+        if !playerCanCheck {
+            return
+        }
+        
         nextPlayer()
     }
     
     func callButtonDidTapped() {
+        if !playerCanCall {
+            return
+        }
+        
         callBet()
         currentPlayer.changeStateInGame(with: maximumBet)
         if isEndOfCircle {
@@ -69,6 +110,10 @@ final class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameView
     }
     
     func raiseButtonDidTapped() {
+        if !playerCanRaise {
+            return
+        }
+        
         raiseBet()
         resetPlayersStateInGame(except: currentPlayer)
         if isEndOfCircle {
@@ -81,7 +126,7 @@ final class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameView
     // MARK: Private methods
     
     private func callBet() {
-        let minimumBetForCall = minimumBetForCall()
+        let minimumBetForCall = minimumBetForCall
         if currentPlayer.chips - minimumBetForCall >= 0 {
             update(bet: minimumBetForCall)
         } else {
@@ -113,18 +158,19 @@ final class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameView
         })
     }
     
-    private func minimumBetForCall() -> Int {
-        maximumBet - (currentPlayer.bet ?? 0)
-    }
-    
     private func nextPlayer() {
-        guard var localRow = currentPlayerIndexPath.value?.row, let playersCount = players?.value?.count else { return
+        guard var localRow = currentPlayerIndexPath.value?.row,
+              let playersCount = players?.value?.count else {
+            return
         }
+
         localRow += 1
         !(localRow <= playersCount - 1) ? localRow = 0 : nil
         currentPlayerIndexPath.value = IndexPath(row: localRow, section: 0)
         
-        if currentPlayer.state == .fold, currentPlayer.state == .inactive, currentPlayer.state == .readyToContinue {
+        if currentPlayer.state == .fold,
+           currentPlayer.state == .inactive,
+           currentPlayer.state == .readyToContinue {
             nextPlayer()
         }
     }
@@ -133,8 +179,8 @@ final class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameView
         bankAmount += bets
         bets = 0
         maximumBet = 0
-        currentPlayerIndexPath.value?.row = 0
         resetAllBets()
+        currentPlayerIndexPath.value?.row = 0
         resetPlayersStateInGame()
         
         switch currentPlayer.state {
@@ -160,11 +206,12 @@ final class ProcessGameViewModel: ViewModel<ProcessGameRouting>, ProcessGameView
     }
 }
 
-extension ProcessGameViewModel {
+extension ProcessGameViewModel: MainTableViewControllerDelegate {
     func winnerWasSelected(with indexPath: IndexPath) {
         let winner = players?.value?[indexPath.row]
         winner?.chips += bankAmount
         resetAllBets()
         currentPlayerIndexPath.value?.row = 0
+        bankAmount = 0
     }
 }

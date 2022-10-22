@@ -37,7 +37,7 @@ final class StartScreenViewController: ViewController<StartScreenViewModeling> {
     private func configureObserver() {
         guard let viewModel = viewModel else { return }
         viewModel.players.addObserver(closure: { value in
-            self.playersTableView?.tableView.reloadData()
+            self.playersTableView?.reloadTable()
         })
     }
     
@@ -45,7 +45,7 @@ final class StartScreenViewController: ViewController<StartScreenViewModeling> {
     
     @IBAction private func addPlayerButton(_ sender: Any) {
         viewModel?.showPlayerSettings()
-        playersTableView?.tableView.reloadData()
+        playersTableView?.reloadTable()
     }
     
     @IBAction func startGameButton(_ sender: Any) {

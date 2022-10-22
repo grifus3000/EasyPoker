@@ -30,7 +30,9 @@ final class ProcessGameViewController: ViewController<ProcessGameViewModeling> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureTable()
+        
         configureObservers()
         viewModel?.startTheGame()
     }
@@ -45,22 +47,42 @@ final class ProcessGameViewController: ViewController<ProcessGameViewModeling> {
 
     // MARK: - Private Methods
     
+    private func configureButtons() {
+        guard let viewModel = viewModel else { return }
+        
+        foldButton.tintColor = calculateButtonColor(isEnabled: viewModel.foldButtonEnabled)
+        callButton.tintColor = calculateButtonColor(isEnabled: viewModel.callButtonColorEnabled)
+        checkButton.tintColor = calculateButtonColor(isEnabled: viewModel.checkButtonColorEnabled)
+        raiseButton.tintColor = calculateButtonColor(isEnabled: viewModel.raiseButtonColorEnabled)
+    }
+    
+    private func calculateButtonColor(isEnabled: Bool) -> UIColor {
+        if isEnabled {
+            return .white
+        } else {
+            return .gray
+        }
+    }
+    
     private func configureTable() {
         playersTableView?.setup(viewModel?.players)
-        playersTableView?.delegate = viewModel
+        playersTableView?.delegate = viewModel as? any MainTableViewControllerDelegate
     }
     
     private func configureObservers() {
         viewModel?.currentPlayerIndexPath.addObserver(closure: { [weak self] value in
             guard let indexPath = value else { return }
+            
             self?.playersTableView?.selectCell(for: indexPath)
             self?.setSliderChips(for: indexPath)
             self?.configureLabels()
+            self?.configureButtons()
         })
         playersTableView?.observableState.addObserver(closure: { [weak self] value in
             switch value {
             case .displayingInformation:
                 self?.finishTheRoundButton.setTitle("Finish the round")
+                self?.configureLabels()
             case .choosingTheWinner:
                 self?.finishTheRoundButton.setTitle("Choose the winner")
             case .none:
@@ -88,22 +110,22 @@ final class ProcessGameViewController: ViewController<ProcessGameViewModeling> {
     
     @IBAction func foldButtonDidTapped(_ sender: Any) {
         viewModel?.foldButtonDidTapped()
-        playersTableView?.tableView.reloadData()
+        playersTableView?.reloadTable()
     }
     
     @IBAction func checkButtonDidTapped(_ sender: Any) {
         viewModel?.checkButtonDidTapped()
-        playersTableView?.tableView.reloadData()
+        playersTableView?.reloadTable()
     }
     
     @IBAction func callButtonDidTapped(_ sender: Any) {
         viewModel?.callButtonDidTapped()
-        playersTableView?.tableView.reloadData()
+        playersTableView?.reloadTable()
     }
     
     @IBAction func raiseButtonDidTapped(_ sender: Any) {
         viewModel?.raiseButtonDidTapped()
-        playersTableView?.tableView.reloadData()
+        playersTableView?.reloadTable()
     }
     
     @IBAction func sliderDidChanged(_ sender: Any) {
@@ -112,6 +134,7 @@ final class ProcessGameViewController: ViewController<ProcessGameViewModeling> {
         let intSliderValue = Int(betSlider.value)
         sliderValueLabel.text = String(intSliderValue)
         viewModel?.currentBet = intSliderValue
+        raiseButton.tintColor = calculateButtonColor(isEnabled: viewModel?.raiseButtonColorEnabled ?? false)
     }
     
     @IBAction func finishTheRoundButton(_ sender: Any) {

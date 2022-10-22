@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ProcessGameViewModeling: MainTableViewControllerDelegate {
+protocol ProcessGameViewModeling {
     var players: Observable<[Player]>? { get set }
     var currentPlayerIndexPath: Observable<IndexPath> { get set }
     var currentBet: Int { get set }
@@ -15,6 +15,11 @@ protocol ProcessGameViewModeling: MainTableViewControllerDelegate {
     var maximumBet: Int { get set }
     var bets: Int { get set }
     var currentPlayer: Player { get }
+    
+    var foldButtonEnabled: Bool { get }
+    var callButtonColorEnabled: Bool { get }
+    var checkButtonColorEnabled: Bool { get }
+    var raiseButtonColorEnabled: Bool { get }
     
     func foldButtonDidTapped()
     func checkButtonDidTapped()

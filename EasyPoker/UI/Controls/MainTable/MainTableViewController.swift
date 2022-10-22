@@ -14,7 +14,7 @@ protocol MainTableViewControllerDelegate: AnyObject {
 final class MainTableViewController: UIViewController {
     // MARK: - IBOutlets
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Private Properties
     
@@ -56,6 +56,10 @@ final class MainTableViewController: UIViewController {
     }
     
     // MARK: - Public Methods
+    
+    func reloadTable() {
+        tableView.reloadData()
+    }
     
     func setup(_ playersObservable: Observable<[Player]>?) {
         self.playersObservable = playersObservable
@@ -100,8 +104,8 @@ extension MainTableViewController: UITableViewDataSource, UITableViewDelegate {
         case .displayingInformation:
             tableView.deselectRow(at: indexPath, animated: false)
         case .choosingTheWinner:
-            state = .displayingInformation
             delegate?.winnerWasSelected(with: indexPath)
+            state = .displayingInformation
             tableView.deselectRow(at: indexPath, animated: false)
         }
         
